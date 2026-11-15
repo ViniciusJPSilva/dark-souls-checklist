@@ -17,20 +17,20 @@
   <link rel="stylesheet" href="css/components.css">
   <script type="module" src="js/main.js"></script>
 </head>
-<body>
+<body data-plat="steam">
   <header class="hero">
-    <p class="eyebrow">Checklist de <span data-termos>troféus</span></p>
+    <p class="eyebrow">Checklist de <span data-termos>conquistas</span></p>
     <h1>Dark Souls <span>Remastered</span></h1>
 
-    <button class="plat" id="plat" aria-label="Detalhes da platina">
+    <button class="plat" id="plat" aria-label="Detalhes de A Alma Negra">
       <span class="ring" id="ring">
         <img id="platIcon" alt="" data-ph="🏆">
       </span>
       <span class="plat-text">
-        <span class="tier t-platinum" id="platTier">Platina</span>
+        <span class="tier t-platinum" id="platTier">100%</span>
         <span class="plat-name" id="platName"></span>
         <span class="stats">
-          <span><strong id="statTrophies">–</strong> <span data-termos>troféus</span></span>
+          <span><strong id="statTrophies">–</strong> <span data-termos>conquistas</span></span>
           <span id="statGWrap" hidden><strong id="statG">–</strong></span>
           <span><strong id="statItems">–</strong> itens</span>
           <span><strong id="statPct">–</strong></span>
@@ -64,9 +64,9 @@
             <div class="menu-group" role="group" aria-labelledby="platLabel">
               <span class="menu-label" id="platLabel">Plataforma</span>
               <div class="plat-seg">
-                <button role="menuitemradio" data-act="plat" data-plat="ps" aria-checked="true">PlayStation</button>
+                <button role="menuitemradio" data-act="plat" data-plat="ps" aria-checked="false">PlayStation</button>
                 <button role="menuitemradio" data-act="plat" data-plat="xbox" aria-checked="false">Xbox</button>
-                <button role="menuitemradio" data-act="plat" data-plat="steam" aria-checked="false">Steam</button>
+                <button role="menuitemradio" data-act="plat" data-plat="steam" aria-checked="true">Steam</button>
               </div>
             </div>
             <hr>

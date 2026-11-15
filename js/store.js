@@ -4,19 +4,20 @@ import { migrar } from "./reforco.js";
 const KEY = "dsr-checklist:v1";
 const listeners = new Set();
 
-export function seedChecks() {
+export function seedChecks(planilha = false) {
   const checks = {};
+  const val = o => planilha && !!o.done;
   for (const sec of SECTIONS) {
     for (const e of sec.entries ?? []) {
-      checks[e.id] = !!e.done;
-      for (const st of e.etapas ?? []) checks[st.id] = !!e.done;
+      checks[e.id] = val(e);
+      for (const st of e.etapas ?? []) checks[st.id] = val(e);
     }
-    for (const i of sec.items ?? []) checks[i.id] = !!i.done;
+    for (const i of sec.items ?? []) checks[i.id] = val(i);
   }
   return checks;
 }
 
-const defaults = () => ({ checks: seedChecks(), open: {}, showEn: false, filter: "all", platform: "ps" });
+const defaults = () => ({ checks: seedChecks(), open: {}, showEn: false, filter: "all", platform: "steam" });
 
 function load() {
   try {
@@ -65,5 +66,5 @@ export function importCode(code) {
   update(s => { s.checks = migrar({ ...seedChecks(), ...salvos }, salvos); }, "reset");
 }
 
-export const restoreSeed = () => update(s => { s.checks = seedChecks(); }, "reset");
+export const restoreSeed = () => update(s => { s.checks = seedChecks(true); }, "reset");
 export const clearAll = () => update(s => { for (const k in s.checks) s.checks[k] = false; }, "reset");

@@ -17,8 +17,8 @@ export const PLATAFORMAS = {
 
 export const GAMERSCORE = { bronze: 15, silver: 25, gold: 90, platinum: 50 };
 
-export const plat = () => PLATAFORMAS[state.platform] ?? PLATAFORMAS.ps;
-export const platId = () => (PLATAFORMAS[state.platform] ? state.platform : "ps");
+export const plat = () => PLATAFORMAS[state.platform] ?? PLATAFORMAS.steam;
+export const platId = () => (PLATAFORMAS[state.platform] ? state.platform : "steam");
 export const tierLabel = tier => plat().tiers[tier] ?? "";
 export const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 export const obtido = () => (plat().fem ? "obtida" : "obtido");
