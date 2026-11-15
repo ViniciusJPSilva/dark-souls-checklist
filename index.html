@@ -19,7 +19,7 @@
 </head>
 <body>
   <header class="hero">
-    <p class="eyebrow">Checklist de troféus</p>
+    <p class="eyebrow">Checklist de <span data-termos>troféus</span></p>
     <h1>Dark Souls <span>Remastered</span></h1>
 
     <button class="plat" id="plat" aria-label="Detalhes da platina">
@@ -27,10 +27,11 @@
         <img id="platIcon" alt="" data-ph="🏆">
       </span>
       <span class="plat-text">
-        <span class="tier t-platinum">Platina</span>
+        <span class="tier t-platinum" id="platTier">Platina</span>
         <span class="plat-name" id="platName"></span>
         <span class="stats">
-          <span><strong id="statTrophies">–</strong> troféus</span>
+          <span><strong id="statTrophies">–</strong> <span data-termos>troféus</span></span>
+          <span id="statGWrap" hidden><strong id="statG">–</strong></span>
           <span><strong id="statItems">–</strong> itens</span>
           <span><strong id="statPct">–</strong></span>
         </span>
@@ -60,6 +61,15 @@
             <button role="menuitemcheckbox" id="optEn" data-act="en" aria-checked="false">
               <span class="switch" aria-hidden="true"></span> Nomes em inglês
             </button>
+            <div class="menu-group" role="group" aria-labelledby="platLabel">
+              <span class="menu-label" id="platLabel">Plataforma</span>
+              <div class="plat-seg">
+                <button role="menuitemradio" data-act="plat" data-plat="ps" aria-checked="true">PlayStation</button>
+                <button role="menuitemradio" data-act="plat" data-plat="xbox" aria-checked="false">Xbox</button>
+                <button role="menuitemradio" data-act="plat" data-plat="steam" aria-checked="false">Steam</button>
+              </div>
+            </div>
+            <hr>
             <button role="menuitem" data-act="guia">Materiais de reforço</button>
             <hr>
             <button role="menuitem" data-act="export">Exportar progresso</button>

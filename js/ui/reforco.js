@@ -1,6 +1,6 @@
 import { esc, norm, initials } from "./dom.js";
 import { itemImg, trophyImg } from "../data/images.js";
-import { TIER, checkIcon, infoIcon, searchText } from "./templates.js";
+import { tierSpan, checkIcon, infoIcon, searchText } from "./templates.js";
 import { MAT, BRAS, resumo, opsPorEtapa, somar, braseirosDe, usadoEm } from "../reforco.js";
 
 const chevron = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6z"/></svg>`;
@@ -27,7 +27,7 @@ export function reforcoRow(e) {
       <button class="row-main" data-expand="${e.id}" aria-expanded="false" aria-controls="rf-${e.id}">
         <span class="thumb"><img src="${trophyImg(e.icon)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="🏆"></span>
         <span class="row-text">
-          <span class="tier">${TIER[e.trophy]}</span>
+          ${tierSpan(e.trophy)}
           <span class="row-title">${esc(e.name)}<span class="en">${esc(e.en)}</span></span>
           <span class="row-sub">${esc(e.desc)}</span>
           <span class="rf-meta"><span class="pill" data-pill>0/${e.etapas.length} etapas</span><span class="rf-chev">${chevron}</span></span>

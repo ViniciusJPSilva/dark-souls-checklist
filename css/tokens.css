@@ -13,6 +13,10 @@
   --ember: #e0893a;
   --ember-2: #f3b562;
   --ember-glow: rgb(224 137 58 / .35);
+  --ember-deep: #a4572a;
+  --ember-tint: rgb(224 137 58 / .08);
+  --ember-wash: rgb(224 137 58 / .16);
+  --on-ember: #1b1207;
   --done: #93b26d;
   --done-bg: rgb(147 178 109 / .08);
   --danger: #e48a7a;
@@ -36,4 +40,24 @@
 
 @media (min-width: 768px) {
   :root { --pad: 24px; }
+}
+
+body[data-plat="xbox"] {
+  --ember: #5fb04a;
+  --ember-2: #a3d98a;
+  --ember-glow: rgb(95 176 74 / .35);
+  --ember-deep: #2f6e2a;
+  --ember-tint: rgb(95 176 74 / .08);
+  --ember-wash: rgb(95 176 74 / .14);
+  --on-ember: #0d1a08;
+}
+
+body[data-plat="steam"] {
+  --ember: #4c9bd3;
+  --ember-2: #8ec6ee;
+  --ember-glow: rgb(76 155 211 / .35);
+  --ember-deep: #24557d;
+  --ember-tint: rgb(76 155 211 / .08);
+  --ember-wash: rgb(76 155 211 / .16);
+  --on-ember: #06121c;
 }

@@ -9,6 +9,7 @@ import { openSheet, refreshSheet, sheetIsOpen, closeSheet, dialog, toast } from 
 import { trofeuDe, marcarEtapa, marcarTrofeu, BRAS } from "./reforco.js";
 import { reforcoBody, pillText, braseiroHTML } from "./ui/reforco.js";
 import { openGuia, onGuiaGoto } from "./ui/materiais.js";
+import { plat, platId, tierLabel, cap, obtido, todosOutros, GAMERSCORE } from "./plataforma.js";
 
 const lookup = new Map();
 for (const sec of SECTIONS) {
@@ -21,7 +22,17 @@ for (const sec of SECTIONS) {
     });
   }
 }
-lookup.set(PLATINUM.id, { auto: true, obj: { ...PLATINUM, req: "Obtenha todos os outros 40 troféus." } });
+const platinumObj = { ...PLATINUM };
+Object.defineProperty(platinumObj, "req", { enumerable: true, get: () => `Obtenha ${todosOutros(40)}.` });
+lookup.set(PLATINUM.id, { auto: true, obj: platinumObj });
+
+const tierOf = new Map([[PLATINUM.id, PLATINUM.trophy]]);
+for (const sec of SECTIONS) {
+  (sec.entries ?? []).forEach(e => tierOf.set(e.id, e.trophy));
+  if (sec.type === "collection") tierOf.set(sec.trophyId, sec.trophy);
+}
+const gamerscore = got => [...got].reduce((a, id) => a + (GAMERSCORE[tierOf.get(id)] ?? 0), 0);
+const GS_TOTAL = [...tierOf.values()].reduce((a, t) => a + GAMERSCORE[t], 0);
 
 const autoDone = rec => (rec.auto === true ? summary().platinum : collectionDone(rec.auto));
 
@@ -35,13 +46,24 @@ function mount() {
   $("#platIcon").src = trophyImg(PLATINUM.icon);
   $("#platName").textContent = PLATINUM.name;
 
-  installImageFallback(document);
   syncPrefs();
   sync();
   applyFilters();
 }
 
+function syncPlat() {
+  const p = plat();
+  document.body.dataset.plat = platId();
+  for (const el of $$("[data-termos]")) el.textContent = p.termos;
+  $("#platTier").textContent = tierLabel("platinum");
+  $("#platTier").hidden = !tierLabel("platinum");
+  $("#plat").setAttribute("aria-label", `Detalhes de ${PLATINUM.name}`);
+  $("#statGWrap").hidden = platId() !== "xbox";
+  for (const b of $$("[data-plat]", $("#menu"))) b.setAttribute("aria-checked", String(b.dataset.plat === platId()));
+}
+
 function syncPrefs() {
+  syncPlat();
   document.body.classList.toggle("show-en", !!state.showEn);
   $("#optEn").setAttribute("aria-checked", String(!!state.showEn));
   for (const b of $$("#filters button")) b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter));
@@ -72,7 +94,7 @@ function sync({ announce = false } = {}) {
     if (sec.type === "collection") {
       const card = $(".coll", el);
       card.classList.toggle("is-done", full);
-      $(".coll-status", card).textContent = full ? "Obtido" : "Pendente";
+      $(".coll-status", card).textContent = full ? cap(obtido()) : "Pendente";
     }
   }
 
@@ -80,13 +102,14 @@ function sync({ announce = false } = {}) {
   $("#statTrophies").textContent = `${s.got.size}/${s.total}`;
   $("#statItems").textContent = `${s.itemsDone}/${s.itemsTotal}`;
   $("#statPct").textContent = `${s.pct}%`;
+  $("#statG").textContent = `${gamerscore(s.got)}/${GS_TOTAL}G`;
   $("#ring").style.setProperty("--p", s.got.size / s.total);
   $("#plat").classList.toggle("is-done", s.platinum);
 
   if (announce && lastTrophies) {
     const fresh = [...s.got].filter(id => !lastTrophies.has(id)).map(trophyMeta).filter(Boolean);
     const t = fresh.at(-1);
-    if (t) toast(`Troféu obtido: <strong>${esc(t.name)}</strong>`, trophyImg(t.icon));
+    if (t) toast(`${cap(plat().termo)} ${obtido()}: <strong>${esc(t.name)}</strong>`, trophyImg(t.icon));
   }
   lastTrophies = s.got;
 }
@@ -142,8 +165,11 @@ function showDetail(id) {
   const rec = lookup.get(id);
   if (!rec) return;
   currentDetail = id;
-  openSheet(detailHTML(rec.obj, { done: rec.auto ? autoDone(rec) : isDone(id), auto: !!rec.auto }));
+  openSheet(detailFor(rec, id));
 }
+
+const detailFor = (rec, id) =>
+  detailHTML(rec.obj, { done: rec.auto ? autoDone(rec) : isDone(id), auto: !!rec.auto, final: rec.auto === true });
 let currentDetail = null;
 
 subscribe(reason => {
@@ -151,8 +177,7 @@ subscribe(reason => {
   sync({ announce: reason === "check" });
   if (state.filter !== "all" || reason === "reset") applyFilters();
   if (sheetIsOpen() && currentDetail) {
-    const rec = lookup.get(currentDetail);
-    refreshSheet(detailHTML(rec.obj, { done: rec.auto ? autoDone(rec) : isDone(currentDetail), auto: !!rec.auto }));
+    refreshSheet(detailFor(lookup.get(currentDetail), currentDetail));
   }
 });
 
@@ -230,6 +255,12 @@ menu.addEventListener("click", async e => {
     update(st => { st.showEn = !st.showEn; }, "pref");
     return syncPrefs();
   }
+  if (act === "plat") {
+    const id = e.target.closest("[data-plat]").dataset.plat;
+    if (id === platId()) return;
+    update(st => { st.platform = id; }, "pref");
+    return mount();
+  }
   setMenu(false);
 
   if (act === "guia") return openGuia();
@@ -265,4 +296,5 @@ menu.addEventListener("click", async e => {
   }
 });
 
+installImageFallback(document);
 mount();

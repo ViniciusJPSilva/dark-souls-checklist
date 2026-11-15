@@ -1,8 +1,12 @@
 import { esc, norm, initials } from "./dom.js";
 import { itemImg, trophyImg } from "../data/images.js";
 import { reforcoRow } from "./reforco.js";
+import { tierLabel, cap, obtido, este, todosOutros } from "../plataforma.js";
 
-export const TIER = { bronze: "Bronze", silver: "Prata", gold: "Ouro", platinum: "Platina" };
+export const tierSpan = (tier, cls = "") => {
+  const label = tierLabel(tier);
+  return label ? `<span class="tier${cls}">${esc(label)}</span>` : "";
+};
 
 export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint].join(" "));
 
@@ -15,7 +19,7 @@ function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search }) {
     <button class="row-main" data-toggle="${id}" aria-pressed="false">
       <span class="thumb">${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${esc(ph)}">` : `<span class="ph">${esc(ph)}</span>`}</span>
       <span class="row-text">
-        ${tier ? `<span class="tier">${TIER[tier]}</span>` : ""}
+        ${tier ? tierSpan(tier) : ""}
         <span class="row-title">${esc(name)}<span class="en">${esc(en)}</span></span>
         ${sub ? `<span class="row-sub">${sub}</span>` : ""}
       </span>
@@ -49,7 +53,7 @@ export function collectionCard(sec) {
   <button class="coll t-${sec.trophy}" data-info="${sec.trophyId}" data-coll="${sec.id}">
     <span class="thumb trophy"><img src="${trophyImg(sec.icon)}" alt="" data-ph="🏆"></span>
     <span class="coll-text">
-      <span class="tier">${TIER[sec.trophy]} · <span class="coll-status">Pendente</span></span>
+      <span class="tier">${tierLabel(sec.trophy) ? `${esc(tierLabel(sec.trophy))} · ` : ""}<span class="coll-status">Pendente</span></span>
       <span class="row-title">${esc(sec.title)}<span class="en">${esc(sec.en)}</span></span>
       <span class="row-sub">${esc(sec.desc)}</span>
       ${sec.cost ? `<span class="coll-cost">${esc(sec.cost)}</span>` : ""}
@@ -82,7 +86,7 @@ export function sectionBlock(sec, open) {
   </details>`;
 }
 
-export function detailHTML(o, { done, auto }) {
+export function detailHTML(o, { done, auto, final = false }) {
   const isTrophy = !!o.trophy;
   const img = isTrophy ? trophyImg(o.icon) : itemImg(o.img);
   const facts = [
@@ -95,7 +99,7 @@ export function detailHTML(o, { done, auto }) {
     <div class="d-head">
       <span class="thumb xl${isTrophy ? " trophy" : ""}">${img ? `<img src="${img}" alt="" referrerpolicy="no-referrer" data-ph="${esc(isTrophy ? "🏆" : initials(o.name))}">` : ""}</span>
       <div>
-        ${isTrophy ? `<span class="tier t-${o.trophy}">${TIER[o.trophy]}</span>` : ""}
+        ${isTrophy ? tierSpan(o.trophy, ` t-${o.trophy}`) : ""}
         <h2 class="d-title">${esc(o.name)}</h2>
         ${o.en ? `<p class="d-en">${esc(o.en)}</p>` : ""}
       </div>
@@ -105,7 +109,7 @@ export function detailHTML(o, { done, auto }) {
     ${o.req ? `<div class="note req"><strong>Requisito</strong><p>${esc(o.req)}</p></div>` : ""}
     ${o.obs ? `<div class="note obs"><strong>Observação</strong><p>${esc(o.obs)}</p></div>` : ""}
     ${auto
-      ? `<p class="d-auto">${done ? "✔ Obtido — " : ""}Este troféu é marcado automaticamente quando todos os itens da coleção estiverem concluídos.</p>`
+      ? `<p class="d-auto">${done ? `✔ ${cap(obtido())} — ` : ""}${este()} automaticamente quando ${final ? `${todosOutros(40)} forem obtid${obtido().slice(-1)}s` : "todos os itens da coleção estiverem concluídos"}.</p>`
       : `<button class="btn ${done ? "ghost" : "primary"} block" data-sheet-toggle="${o.id}">${done ? "Desmarcar" : "Marcar como concluído"}</button>`}
   `;
 }

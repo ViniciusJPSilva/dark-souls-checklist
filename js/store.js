@@ -16,7 +16,7 @@ export function seedChecks() {
   return checks;
 }
 
-const defaults = () => ({ checks: seedChecks(), open: {}, showEn: false, filter: "all" });
+const defaults = () => ({ checks: seedChecks(), open: {}, showEn: false, filter: "all", platform: "ps" });
 
 function load() {
   try {

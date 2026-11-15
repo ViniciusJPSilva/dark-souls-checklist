@@ -76,7 +76,7 @@ h1 span { display: block; font-size: .4em; letter-spacing: .5em; padding-left: .
   background: var(--surface); border: 1px solid var(--line-2); border-radius: 999px; padding: 3px;
 }
 .seg button { height: 34px; border-radius: 999px; color: var(--muted); text-align: center; font-size: 15px; transition: background .2s, color .2s; }
-.seg button[aria-pressed="true"] { background: var(--ember); color: #1b1207; font-weight: 600; }
+.seg button[aria-pressed="true"] { background: var(--ember); color: var(--on-ember); font-weight: 600; }
 
 .icon-btn {
   width: 42px; height: 42px; flex: none; display: grid; place-items: center; border-radius: 50%;
@@ -140,7 +140,7 @@ h1 span { display: block; font-size: .4em; letter-spacing: .5em; padding-left: .
 .sec-count { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; }
 .section.full .sec-count { color: var(--done); }
 .sec-bar { grid-column: 1 / -1; height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; }
-.sec-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #a4572a, var(--ember-2)); transition: width .5s var(--ease); }
+.sec-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--ember-deep), var(--ember-2)); transition: width .5s var(--ease); }
 .section.full .sec-bar i { background: var(--done); }
 .sec-body { padding-top: 10px; display: grid; gap: 10px; }
 
@@ -255,7 +255,7 @@ h1 span { display: block; font-size: .4em; letter-spacing: .5em; padding-left: .
 .d-auto { margin: 16px 0 0; color: var(--muted); font-style: italic; }
 
 .btn { height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); text-align: center; font-weight: 600; }
-.btn.primary { background: var(--ember); border-color: var(--ember); color: #1b1207; }
+.btn.primary { background: var(--ember); border-color: var(--ember); color: var(--on-ember); }
 .btn.ghost:hover { border-color: var(--ember); }
 .btn.danger { background: var(--danger); border-color: var(--danger); color: #2a0d07; }
 .btn.block { display: block; width: 100%; margin-top: 18px; }
@@ -404,7 +404,7 @@ h1 span { display: block; font-size: .4em; letter-spacing: .5em; padding-left: .
   padding: 6px 8px; border-radius: var(--r-sm); background: var(--bg-2); border: 1px solid transparent;
 }
 .guia-item:hover { border-color: var(--line-2); }
-.guia-item[aria-current="true"] { border-color: var(--ember); background: rgb(224 137 58 / .08); }
+.guia-item[aria-current="true"] { border-color: var(--ember); background: var(--ember-tint); }
 .guia-empty { margin: 12px 0; }
 .guia-hint { color: var(--muted); font-style: italic; }
 
@@ -459,3 +459,10 @@ h1 span { display: block; font-size: .4em; letter-spacing: .5em; padding-left: .
   .guia.has-ficha .guia-search { display: flex; }
   .guia-ficha { padding: 18px 22px 28px; }
 }
+
+.menu-group { display: grid; gap: 6px; padding: 6px 6px 4px; }
+.menu-label { font: 500 10.5px var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--faint); padding: 0 6px; }
+.plat-seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; padding: 3px; border-radius: var(--r-sm); background: var(--bg-2); border: 1px solid var(--line); }
+.menu .plat-seg button { justify-content: center; padding: 8px 4px; min-height: 36px; font-size: 14px; color: var(--muted); }
+.menu .plat-seg button[aria-checked="true"] { background: var(--ember); color: var(--on-ember); font-weight: 600; }
+body[data-plat="xbox"] .tier:not(.t-platinum), body[data-plat="xbox"] .t-bronze .tier, body[data-plat="xbox"] .t-silver .tier, body[data-plat="xbox"] .t-gold .tier { color: var(--ember-2); font-variant-numeric: tabular-nums; }
