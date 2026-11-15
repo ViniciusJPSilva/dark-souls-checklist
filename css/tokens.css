@@ -1,0 +1,39 @@
+:root {
+  --bg: #0d0c0b;
+  --bg-2: #14120f;
+  --surface: #1a1814;
+  --surface-2: #221f1a;
+  --line: #2c2822;
+  --line-2: #3d372d;
+
+  --text: #ece4d3;
+  --muted: #a1977f;
+  --faint: #6f6757;
+
+  --ember: #e0893a;
+  --ember-2: #f3b562;
+  --ember-glow: rgb(224 137 58 / .35);
+  --done: #93b26d;
+  --done-bg: rgb(147 178 109 / .08);
+  --danger: #e48a7a;
+
+  --bronze: #c08552;
+  --silver: #bcc2ca;
+  --gold: #e3c15a;
+  --platinum: #a9d2e8;
+
+  --r-sm: 8px;
+  --r: 14px;
+  --r-lg: 20px;
+
+  --font: "EB Garamond", Georgia, "Times New Roman", serif;
+  --display: "Cinzel", Georgia, serif;
+
+  --pad: 16px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+@media (min-width: 768px) {
+  :root { --pad: 24px; }
+}
