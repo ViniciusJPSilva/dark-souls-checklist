@@ -5,7 +5,10 @@ import { summary, sectionCounts, collectionDone, trophyMeta } from "./progress.j
 import { applyFilters } from "./filters.js";
 import { $, $$, esc, installImageFallback } from "./ui/dom.js";
 import { sectionBlock, detailHTML } from "./ui/templates.js";
-import { openSheet, refreshSheet, sheetIsOpen, dialog, toast } from "./ui/overlays.js";
+import { openSheet, refreshSheet, sheetIsOpen, closeSheet, dialog, toast } from "./ui/overlays.js";
+import { trofeuDe, marcarEtapa, marcarTrofeu, BRAS } from "./reforco.js";
+import { reforcoBody, pillText, braseiroHTML } from "./ui/reforco.js";
+import { openGuia, onGuiaGoto } from "./ui/materiais.js";
 
 const lookup = new Map();
 for (const sec of SECTIONS) {
@@ -50,8 +53,10 @@ function sync({ announce = false } = {}) {
   for (const row of $$(".row")) {
     const on = isDone(row.dataset.id);
     row.classList.toggle("is-done", on);
-    row.querySelector(".row-main").setAttribute("aria-pressed", String(on));
+    row.querySelector("[data-toggle]").setAttribute("aria-pressed", String(on));
   }
+
+  for (const row of $$(".is-reforco")) syncReforco(row);
 
   for (const sec of SECTIONS) {
     const el = $(`#sec-${sec.id}`);
@@ -86,7 +91,52 @@ function sync({ announce = false } = {}) {
   lastTrophies = s.got;
 }
 
-const toggle = id => update(st => { st.checks[id] = !st.checks[id]; }, "check");
+const expanded = new Set();
+
+function syncReforco(row) {
+  const t = trofeuDe(row.dataset.id);
+  if (!t) return;
+  $("[data-pill]", row).textContent = pillText(t, isDone);
+  const open = expanded.has(t.id);
+  const body = $(".rf-body", row);
+  row.classList.toggle("is-open", open);
+  $("[data-expand]", row).setAttribute("aria-expanded", String(open));
+  body.hidden = !open;
+  if (open) body.innerHTML = reforcoBody(t, isDone);
+}
+
+function setExpanded(id, open) {
+  if (open) expanded.add(id); else expanded.delete(id);
+  const row = $(`.is-reforco[data-id="${id}"]`);
+  if (row) syncReforco(row);
+}
+
+function toggle(id) {
+  const t = trofeuDe(id);
+  if (!t) return update(st => { st.checks[id] = !st.checks[id]; }, "check");
+  const on = !isDone(id);
+  if (on && t.etapas.some(s => !isDone(s.id))) toast("Todas as etapas foram marcadas.");
+  update(st => marcarTrofeu(st.checks, id, on), "check");
+}
+
+const toggleStep = id => update(st => marcarEtapa(st.checks, id, !st.checks[id]), "check");
+
+function goto(id) {
+  const row = $(`.row[data-id="${id}"]`);
+  if (!row) return;
+  const sec = row.closest(".section");
+  if (row.hidden) {
+    $("#search").value = "";
+    update(st => { st.filter = "all"; }, "pref");
+    syncPrefs();
+    applyFilters();
+  }
+  if (!sec.open) { sec.open = true; update(st => { st.open[sec.dataset.sec] = true; }, "pref"); }
+  if (trofeuDe(id)) setExpanded(id, true);
+  row.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+
+onGuiaGoto(goto);
 
 function showDetail(id) {
   const rec = lookup.get(id);
@@ -113,6 +163,21 @@ app.addEventListener("click", e => {
   const t = e.target.closest("[data-toggle]");
   if (t) return toggle(t.dataset.toggle);
 
+  const step = e.target.closest("[data-step]");
+  if (step) return toggleStep(step.dataset.step);
+
+  const ex = e.target.closest("[data-expand]");
+  if (ex) return setExpanded(ex.dataset.expand, !expanded.has(ex.dataset.expand));
+
+  const br = e.target.closest("[data-braseiro]");
+  if (br) {
+    currentDetail = null;
+    return openSheet(braseiroHTML(BRAS.get(br.dataset.braseiro)));
+  }
+
+  const mat = e.target.closest("[data-mat]");
+  if (mat) return openGuia(mat.dataset.mat);
+
   const summaryEl = e.target.closest("summary");
   if (summaryEl) {
     const sec = summaryEl.parentElement;
@@ -122,7 +187,11 @@ app.addEventListener("click", e => {
 
 $("#sheet").addEventListener("click", e => {
   const b = e.target.closest("[data-sheet-toggle]");
-  if (b) toggle(b.dataset.sheetToggle);
+  if (b) return toggle(b.dataset.sheetToggle);
+  const g = e.target.closest("[data-guia]");
+  if (g) { closeSheet(); return openGuia(g.dataset.guia); }
+  const go = e.target.closest("[data-goto]");
+  if (go) { closeSheet(); goto(go.dataset.goto); }
 });
 
 $("#plat").addEventListener("click", () => showDetail(PLATINUM.id));
@@ -162,6 +231,8 @@ menu.addEventListener("click", async e => {
     return syncPrefs();
   }
   setMenu(false);
+
+  if (act === "guia") return openGuia();
 
   if (act === "export") {
     const code = exportCode();

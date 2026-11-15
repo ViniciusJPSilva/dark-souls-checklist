@@ -1,12 +1,13 @@
 import { esc, norm, initials } from "./dom.js";
 import { itemImg, trophyImg } from "../data/images.js";
+import { reforcoRow } from "./reforco.js";
 
 export const TIER = { bronze: "Bronze", silver: "Prata", gold: "Ouro", platinum: "Platina" };
 
-const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint].join(" "));
+export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint].join(" "));
 
-const checkIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>`;
-const infoIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 10h2v7h-2zm0-3h2v2h-2zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>`;
+export const checkIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>`;
+export const infoIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 10h2v7h-2zm0-3h2v2h-2zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>`;
 
 function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search }) {
   return `
@@ -60,7 +61,7 @@ export function collectionCard(sec) {
 export function sectionBlock(sec, open) {
   let body;
   if (sec.type === "list") {
-    body = `<ul class="rows">${sec.entries.map(entryRow).join("")}</ul>`;
+    body = `<ul class="rows">${sec.entries.map(e => (e.etapas ? reforcoRow(e) : entryRow(e))).join("")}</ul>`;
   } else {
     const byId = Object.fromEntries(sec.items.map(i => [i.id, i]));
     const groups = sec.groups ?? [{ label: "", ids: sec.items.map(i => i.id) }];

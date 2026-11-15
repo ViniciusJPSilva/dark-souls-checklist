@@ -1,4 +1,5 @@
 import { SECTIONS } from "./data/index.js";
+import { migrar } from "./reforco.js";
 
 const KEY = "dsr-checklist:v1";
 const listeners = new Set();
@@ -6,7 +7,10 @@ const listeners = new Set();
 export function seedChecks() {
   const checks = {};
   for (const sec of SECTIONS) {
-    for (const e of sec.entries ?? []) checks[e.id] = !!e.done;
+    for (const e of sec.entries ?? []) {
+      checks[e.id] = !!e.done;
+      for (const st of e.etapas ?? []) checks[st.id] = !!e.done;
+    }
     for (const i of sec.items ?? []) checks[i.id] = !!i.done;
   }
   return checks;
@@ -24,7 +28,8 @@ function load() {
       saved.open = Object.fromEntries(SECTIONS.map(s => [s.id, !saved.collapsed[s.id]]));
       delete saved.collapsed;
     }
-    return { ...base, ...saved, checks: { ...base.checks, ...saved.checks } };
+    const salvos = saved.checks ?? {};
+    return { ...base, ...saved, checks: migrar({ ...base.checks, ...salvos }, salvos) };
   } catch {
     return defaults();
   }
@@ -35,6 +40,8 @@ export const state = load();
 function persist() {
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {}
 }
+
+persist();
 
 export function update(mutator, reason = "update") {
   mutator(state);
@@ -54,9 +61,8 @@ export function importCode(code) {
   const bytes = Uint8Array.from(atob(code.trim()), c => c.charCodeAt(0));
   const data = JSON.parse(new TextDecoder().decode(bytes));
   if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("formato inválido");
-  update(s => {
-    s.checks = { ...seedChecks(), ...Object.fromEntries(Object.entries(data).map(([k, v]) => [k, !!v])) };
-  }, "reset");
+  const salvos = Object.fromEntries(Object.entries(data).map(([k, v]) => [k, !!v]));
+  update(s => { s.checks = migrar({ ...seedChecks(), ...salvos }, salvos); }, "reset");
 }
 
 export const restoreSeed = () => update(s => { s.checks = seedChecks(); }, "reset");
