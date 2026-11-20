@@ -1,7 +1,7 @@
-import { caminhos } from "./data/caminhos.js";
-import { materiais } from "./data/materiais.js";
-import { braseiros } from "./data/braseiros.js";
-import { reforco } from "./data/reforco.js";
+import { caminhos } from "./data/ds1/caminhos.js";
+import { materiais } from "./data/ds1/materiais.js";
+import { braseiros } from "./data/ds1/braseiros.js";
+import { reforco } from "./data/ds1/reforco.js";
 
 export const MAT = new Map(materiais.map(m => [m.id, m]));
 export const BRAS = new Map(braseiros.map(b => [b.id, b]));

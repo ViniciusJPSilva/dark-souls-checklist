@@ -1,4 +1,5 @@
-import { SECTIONS, PLATINUM } from "./data/index.js";
+import { SECTIONS, PLATINUM, META } from "./data/index.js";
+import { prefs, setPref } from "./prefs.js";
 import { trophyImg } from "./data/images.js";
 import { state, update, subscribe, isDone, exportCode, importCode, restoreSeed, clearAll } from "./store.js";
 import { summary, sectionCounts, collectionDone, trophyMeta } from "./progress.js";
@@ -23,7 +24,7 @@ for (const sec of SECTIONS) {
   }
 }
 const platinumObj = { ...PLATINUM };
-Object.defineProperty(platinumObj, "req", { enumerable: true, get: () => `Obtenha ${todosOutros(40)}.` });
+Object.defineProperty(platinumObj, "req", { enumerable: true, get: () => `Obtenha ${todosOutros()}.` });
 lookup.set(PLATINUM.id, { auto: true, obj: platinumObj });
 
 const tierOf = new Map([[PLATINUM.id, PLATINUM.trophy]]);
@@ -64,8 +65,9 @@ function syncPlat() {
 
 function syncPrefs() {
   syncPlat();
-  document.body.classList.toggle("show-en", !!state.showEn);
-  $("#optEn").setAttribute("aria-checked", String(!!state.showEn));
+  document.body.classList.toggle("show-en", !!prefs.showEn);
+  $("#optEn").setAttribute("aria-checked", String(!!prefs.showEn));
+  $('[data-act="guia"]').hidden = !META.materiais;
   for (const b of $$("#filters button")) b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter));
 }
 
@@ -252,13 +254,13 @@ menu.addEventListener("click", async e => {
   if (!act) return;
 
   if (act === "en") {
-    update(st => { st.showEn = !st.showEn; }, "pref");
+    setPref("showEn", !prefs.showEn);
     return syncPrefs();
   }
   if (act === "plat") {
     const id = e.target.closest("[data-plat]").dataset.plat;
     if (id === platId()) return;
-    update(st => { st.platform = id; }, "pref");
+    setPref("platform", id);
     return mount();
   }
   setMenu(false);

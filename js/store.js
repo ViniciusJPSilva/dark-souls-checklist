@@ -1,7 +1,7 @@
-import { SECTIONS } from "./data/index.js";
+import { SECTIONS, META } from "./data/index.js";
 import { migrar } from "./reforco.js";
 
-const KEY = "dsr-checklist:v1";
+const KEY = META.storageKey;
 const listeners = new Set();
 
 export function seedChecks(planilha = false) {
@@ -17,7 +17,7 @@ export function seedChecks(planilha = false) {
   return checks;
 }
 
-const defaults = () => ({ checks: seedChecks(), open: {}, showEn: false, filter: "all", platform: "steam" });
+const defaults = () => ({ checks: seedChecks(), open: {}, filter: "all" });
 
 function load() {
   try {
@@ -29,6 +29,8 @@ function load() {
       saved.open = Object.fromEntries(SECTIONS.map(s => [s.id, !saved.collapsed[s.id]]));
       delete saved.collapsed;
     }
+    delete saved.showEn;
+    delete saved.platform;
     const salvos = saved.checks ?? {};
     return { ...base, ...saved, checks: migrar({ ...base.checks, ...salvos }, salvos) };
   } catch {

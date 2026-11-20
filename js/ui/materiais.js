@@ -1,7 +1,7 @@
 import { $, esc, norm, initials } from "./dom.js";
 import { itemImg } from "../data/images.js";
-import { materiais } from "../data/materiais.js";
-import { braseiros } from "../data/braseiros.js";
+import { materiais } from "../data/ds1/materiais.js";
+import { braseiros } from "../data/ds1/braseiros.js";
 import { usadoEm, caminhosQueUsam } from "../reforco.js";
 
 const closeIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>`;

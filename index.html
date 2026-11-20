@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d0c0b">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Checklist de troféus e conquistas de Dark Souls Remastered em português, com magias, armas raras e progresso salvo no navegador.">
-  <title>Dark Souls Remastered — Checklist de Troféus</title>
+  <meta name="description" content="Checklist de troféus e conquistas de Dark Souls em português, com magias, armas raras e progresso salvo no navegador.">
+  <title>Dark Souls — Checklist de Conquistas</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,13 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/boot.js"></script>
 </head>
 <body data-plat="steam">
   <header class="hero">
+    <nav class="games" id="games" aria-label="Jogo"></nav>
     <p class="eyebrow">Checklist de <span data-termos>conquistas</span></p>
-    <h1>Dark Souls <span>Remastered</span></h1>
+    <h1 id="gameTitle">Dark Souls <span>Remastered</span></h1>
 
     <button class="plat" id="plat" aria-label="Detalhes de A Alma Negra">
       <span class="ring" id="ring">

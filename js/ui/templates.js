@@ -109,7 +109,7 @@ export function detailHTML(o, { done, auto, final = false }) {
     ${o.req ? `<div class="note req"><strong>Requisito</strong><p>${esc(o.req)}</p></div>` : ""}
     ${o.obs ? `<div class="note obs"><strong>Observação</strong><p>${esc(o.obs)}</p></div>` : ""}
     ${auto
-      ? `<p class="d-auto">${done ? `✔ ${cap(obtido())} — ` : ""}${este()} automaticamente quando ${final ? `${todosOutros(40)} forem obtid${obtido().slice(-1)}s` : "todos os itens da coleção estiverem concluídos"}.</p>`
+      ? `<p class="d-auto">${done ? `✔ ${cap(obtido())} — ` : ""}${este()} automaticamente quando ${final ? `${todosOutros()} forem obtid${obtido().slice(-1)}s` : "todos os itens da coleção estiverem concluídos"}.</p>`
       : `<button class="btn ${done ? "ghost" : "primary"} block" data-sheet-toggle="${o.id}">${done ? "Desmarcar" : "Marcar como concluído"}</button>`}
   `;
 }
