@@ -18,7 +18,17 @@ const thumb = i => {
   return `<span class="thumb sm">${src ? `<img src="${src}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${esc(initials(i.name))}">` : `<span class="ph">${esc(initials(i.name))}</span>`}</span>`;
 };
 
+function passoBtn(i) {
+  const on = isDoneFn(i.id);
+  return `<li><button class="rt-item rt-passo${on ? " is-done" : ""}" data-rt-toggle="${i.id}" aria-pressed="${on}">
+    <span class="rt-npc">${esc(i.npc)}</span>
+    <span class="rt-item-text"><span class="rt-passo-text">${esc(i.name)}</span>${i.prazo ? `<span class="rt-passo-prazo">${esc(i.prazo)}</span>` : ""}</span>
+    <span class="check" aria-hidden="true">${checkIcon}</span>
+  </button></li>`;
+}
+
 function itemBtn(i) {
+  if (i.passo) return passoBtn(i);
   const on = isDoneFn(i.id);
   return `<li><button class="rt-item${on ? " is-done" : ""}" data-rt-toggle="${i.id}" aria-pressed="${on}">
     ${thumb(i)}

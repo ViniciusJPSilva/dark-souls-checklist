@@ -51,7 +51,7 @@ Os nomes dos troféus na Steam e na PSN em PT-BR são idênticos. A Estus diz qu
 Os 33 gestos ficam em inglês, porque a Estus não traz uma tradução oficial deles. Os nomes de fogueiras também ficam em inglês (Cliff Underside, Keep Ruins, Church of Yorshka etc.).
 
 
-Também continuam em inglês alguns itens citados nas dicas: Storm Ruler, Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil e Purging Stone.
+Também continuam em inglês alguns itens citados nas dicas: Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil e Purging Stone.
 
 ## Plano de ciclos (fase 3)
 
@@ -70,3 +70,22 @@ A ordem dos finais no plano (Usurpação no primeiro ciclo, se a missão der cer
 - Ordem das áreas e chefes: https://darksouls3.wiki.fextralife.com/Game+Progress+Route (Cemitério → Muralha → Assentamento → Estrada → Forte de Farron → Catedral → Carthus → Irithyll → Calabouço → Capital Profanada → Anor Londo → Muralha/Dançarino → Castelo → Biblioteca → Fornalha, com Lago Ardente, Jardim, Túmulos e Pico como ramos opcionais).
 - Também consultado: o roteiro em PT da Estus (https://estus.com.br/wiki/dark-souls-3/jornada/primeira-jornada/muralha-subida).
 - Cada item entra na etapa da área onde fica (campo `local`). As transposições de almas entram na etapa seguinte ao chefe que dá a alma (com o Forno de Transposição liberado depois da Grande Madeira). Compras no Santuário, recompensas de pacto e itens iniciais ficam em "Sem prazo fixo".
+
+### Etapa 2 do roteiro: missões e vendedores
+
+- Onde ficam pergaminhos e tomos (o que libera as magias de Orbeck, Cornyx, Irina e Karla): primeira tabela de https://darksouls3.wiki.fextralife.com/Sorceries, https://darksouls3.wiki.fextralife.com/Pyromancies e https://darksouls3.wiki.fextralife.com/Miracles
+- Cinzas para a Serva: https://darksouls3.wiki.fextralife.com/Dreamchaser%27s_Ashes e https://darksouls3.wiki.fextralife.com/Paladin%27s_Ashes. O Osso de Loretta: https://darksouls3.wiki.fextralife.com/Loretta%27s_Bone
+- Passos e falhas das missões:
+  - Sirris: https://darksouls3.wiki.fextralife.com/Sirris_of_the_Sunless_Realms
+  - Anri: https://darksouls3.wiki.fextralife.com/Anri_of_Astora
+  - Siegward: https://darksouls3.wiki.fextralife.com/Siegward_of_Catarina
+  - Orbeck: https://darksouls3.wiki.fextralife.com/Orbeck_of_Vinheim
+  - Greirat: https://darksouls3.wiki.fextralife.com/Greirat_of_the_Undead_Settlement
+  - Yoel: https://darksouls3.wiki.fextralife.com/Yoel_of_Londor
+  - Irina: https://darksouls3.wiki.fextralife.com/Irina_of_Carim
+  - Cornyx: https://darksouls3.wiki.fextralife.com/Cornyx_of_the_Great_Swamp
+  - Karla: https://darksouls3.wiki.fextralife.com/Karla
+  - Patches: https://darksouls3.wiki.fextralife.com/Unbreakable_Patches
+- A missão da Usurpação (Yoel, Yuria e Anri) também foi conferida na PowerPyx: https://www.powerpyx.com/dark-souls-3-trophy-guide/
+- Itens que ficam depois do chefe da própria área (por exemplo o Anel da Princesa do Sol depois de Aldrich, ou o Fragmento de Estus 9 pela fogueira do Dançarino) foram passados para a etapa seguinte, com base no texto de local de cada um.
+- Os nomes de itens-chave em PT (Chaveiro de Carcereiro, Chave de Cela Antiga, Boneco Pequeno, Governante da tempestade) vêm do catálogo da Estus.

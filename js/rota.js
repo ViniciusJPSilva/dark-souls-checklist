@@ -20,6 +20,14 @@ function montar() {
       (alvo ? alvo.itens : avulsos).push(item);
     }
   }
+  for (const p of ROTEIRO.passos ?? []) {
+    const alvo = porId.get(p.node);
+    if (alvo) alvo.itens.unshift({ id: p.id, name: p.texto, npc: p.npc, perdivel: !!p.perdivel, prazo: p.perdivel, grupo: "Missões", passo: true });
+  }
+  for (const n of nodes) {
+    const passos = n.itens.filter(i => i.passo);
+    n.itens = [...passos.reverse(), ...n.itens.filter(i => !i.passo)];
+  }
   return { nodes, avulsos, semPrazo: ROTEIRO.semPrazo, fonte: ROTEIRO.fonte };
 }
 

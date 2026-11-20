@@ -23,7 +23,7 @@ export const chefes = {
       "desc": "Derrote Yhorm, o Gigante, Lorde das Cinzas.",
       "hint": "Lorde das Cinzas",
       "local": "Capital Profanada",
-      "obs": "Pegue a espada Storm Ruler perto do trono da arena; a arte dela derruba Yhorm em poucos golpes.",
+      "obs": "Pegue a espada Governante da tempestade perto do trono da arena; a arte dela derruba Yhorm em poucos golpes.",
       "done": false
     },
     {
