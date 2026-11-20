@@ -68,6 +68,7 @@ function syncPrefs() {
   document.body.classList.toggle("show-en", !!prefs.showEn);
   $("#optEn").setAttribute("aria-checked", String(!!prefs.showEn));
   $('[data-act="guia"]').hidden = !META.materiais;
+  $('[data-act="seed"]').hidden = !META.planilha;
   for (const b of $$("#filters button")) b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter));
 }
 
@@ -103,6 +104,7 @@ function sync({ announce = false } = {}) {
   const s = summary();
   $("#statTrophies").textContent = `${s.got.size}/${s.total}`;
   $("#statItems").textContent = `${s.itemsDone}/${s.itemsTotal}`;
+  $("#statItems").parentElement.hidden = !s.itemsTotal;
   $("#statPct").textContent = `${s.pct}%`;
   $("#statG").textContent = `${gamerscore(s.got)}/${GS_TOTAL}G`;
   $("#ring").style.setProperty("--p", s.got.size / s.total);

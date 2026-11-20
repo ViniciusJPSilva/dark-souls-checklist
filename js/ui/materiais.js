@@ -1,5 +1,6 @@
 import { $, esc, norm, initials } from "./dom.js";
 import { itemImg } from "../data/images.js";
+import { META } from "../data/index.js";
 import { materiais } from "../data/ds1/materiais.js";
 import { braseiros } from "../data/ds1/braseiros.js";
 import { usadoEm, caminhosQueUsam } from "../reforco.js";
@@ -195,7 +196,7 @@ q.addEventListener("input", () => { clearTimeout(deb); deb = setTimeout(filter, 
 
 const fromHash = () => {
   const m = location.hash.match(/^#mat-(.+)$/);
-  if (m && BY_ID.has(m[1])) openGuia(m[1]);
+  if (META.materiais && m && BY_ID.has(m[1])) openGuia(m[1]);
 };
 window.addEventListener("hashchange", fromHash);
 fromHash();

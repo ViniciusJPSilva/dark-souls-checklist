@@ -14,7 +14,8 @@ export const META = {
   "fxBase": "https://static0.fextralifeimages.com/file/darksouls/",
   "trophyBase": "https://i.psnprofiles.com/games/0a92f9/trophies/",
   "gamerscore": { "bronze": 15, "silver": 25, "gold": 90, "platinum": 50 },
-  "materiais": true
+  "materiais": true,
+  "planilha": true
 };
 
 export const PLATINUM = {

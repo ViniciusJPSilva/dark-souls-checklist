@@ -495,3 +495,11 @@ body[data-plat="xbox"] .tier:not(.t-platinum), body[data-plat="xbox"] .t-bronze 
 .soon-text { margin: 0; color: var(--muted); }
 .soon-joke { margin: 4px 0 0; color: var(--ember-2); font-style: italic; }
 .soon-btn { display: inline-flex; align-items: center; margin-top: 12px; text-decoration: none; }
+
+.row-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.badge-perdivel {
+  font: 500 10px/1 var(--display); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--danger); border: 1px solid rgb(228 138 122 / .45); border-radius: 999px; padding: 3px 7px;
+}
+.note.perdivel { border-left-color: var(--danger); }
+.note.perdivel strong { color: var(--danger); }

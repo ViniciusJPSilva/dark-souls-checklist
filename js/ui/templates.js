@@ -8,18 +8,21 @@ export const tierSpan = (tier, cls = "") => {
   return label ? `<span class="tier${cls}">${esc(label)}</span>` : "";
 };
 
-export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint].join(" "));
+export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint, o.perdivel && `perdivel ${o.perdivel}`].join(" "));
 
 export const checkIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>`;
 export const infoIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 10h2v7h-2zm0-3h2v2h-2zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>`;
 
-function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search }) {
+export const perdivelBadge = on => (on ? `<span class="badge-perdivel">Perdível</span>` : "");
+
+function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search, perdivel }) {
+  const top = [tier ? tierSpan(tier) : "", perdivelBadge(perdivel)].filter(Boolean).join("");
   return `
   <li class="row ${kind}${tier ? ` t-${tier}` : ""}" data-id="${id}" data-search="${esc(search)}">
     <button class="row-main" data-toggle="${id}" aria-pressed="false">
       <span class="thumb">${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${esc(ph)}">` : `<span class="ph">${esc(ph)}</span>`}</span>
       <span class="row-text">
-        ${tier ? tierSpan(tier) : ""}
+        ${top ? `<span class="row-top">${top}</span>` : ""}
         <span class="row-title">${esc(name)}<span class="en">${esc(en)}</span></span>
         ${sub ? `<span class="row-sub">${sub}</span>` : ""}
       </span>
@@ -34,7 +37,7 @@ export function entryRow(e) {
     id: e.id, name: e.name, en: e.en, kind: "is-trophy", tier: e.trophy,
     img: trophyImg(e.icon), ph: "🏆",
     sub: esc(e.desc),
-    hasInfo: true, search: searchText(e)
+    hasInfo: true, search: searchText(e), perdivel: !!e.perdivel
   });
 }
 
@@ -108,6 +111,7 @@ export function detailHTML(o, { done, auto, final = false }) {
     ${facts.length ? `<dl class="d-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
     ${o.req ? `<div class="note req"><strong>Requisito</strong><p>${esc(o.req)}</p></div>` : ""}
     ${o.obs ? `<div class="note obs"><strong>Observação</strong><p>${esc(o.obs)}</p></div>` : ""}
+    ${o.perdivel ? `<div class="note perdivel"><strong>Perdível</strong><p>${esc(o.perdivel)}</p></div>` : ""}
     ${auto
       ? `<p class="d-auto">${done ? `✔ ${cap(obtido())} — ` : ""}${este()} automaticamente quando ${final ? `${todosOutros()} forem obtid${obtido().slice(-1)}s` : "todos os itens da coleção estiverem concluídos"}.</p>`
       : `<button class="btn ${done ? "ghost" : "primary"} block" data-sheet-toggle="${o.id}">${done ? "Desmarcar" : "Marcar como concluído"}</button>`}
