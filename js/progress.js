@@ -12,6 +12,7 @@ export function trophies() {
   const got = new Set();
   let total = 0;
   for (const sec of SECTIONS) {
+    if (sec.type === "guide") continue;
     if (sec.type === "list") {
       total += sec.entries.length;
       sec.entries.forEach(e => isDone(e.id) && got.add(e.id));

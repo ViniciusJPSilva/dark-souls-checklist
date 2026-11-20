@@ -70,6 +70,9 @@ function syncPrefs() {
   $('[data-act="guia"]').hidden = !META.materiais;
   $('[data-act="seed"]').hidden = !META.planilha;
   for (const b of $$("#filters button")) b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter));
+  $("#barExtra").hidden = !META.ciclos;
+  for (const b of $$("#cicloSeg button")) b.setAttribute("aria-pressed", String(b.dataset.ciclo === (state.ciclo ?? "NG++")));
+  $("#soPerdiveis").setAttribute("aria-pressed", String(!!state.soPerdiveis));
 }
 
 let lastTrophies = null;
@@ -236,6 +239,20 @@ chips.addEventListener("click", e => {
 
 let debounce;
 $("#search").addEventListener("input", () => { clearTimeout(debounce); debounce = setTimeout(applyFilters, 120); });
+
+$("#cicloSeg").addEventListener("click", e => {
+  const b = e.target.closest("button[data-ciclo]");
+  if (!b) return;
+  update(st => { st.ciclo = b.dataset.ciclo; }, "pref");
+  syncPrefs();
+  applyFilters();
+});
+
+$("#soPerdiveis").addEventListener("click", () => {
+  update(st => { st.soPerdiveis = !st.soPerdiveis; }, "pref");
+  syncPrefs();
+  applyFilters();
+});
 
 $("#filters").addEventListener("click", e => {
   const b = e.target.closest("button[data-filter]");

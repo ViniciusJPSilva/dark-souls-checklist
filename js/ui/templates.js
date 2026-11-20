@@ -15,12 +15,13 @@ export const infoIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1
 
 export const perdivelBadge = on => (on ? `<span class="badge-perdivel">Perdível</span>` : "");
 
-function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search, perdivel }) {
+function row({ id, name, en, sub, img, ph, tier, kind, hasInfo, search, perdivel, ciclo, thumb = true }) {
   const top = [tier ? tierSpan(tier) : "", perdivelBadge(perdivel)].filter(Boolean).join("");
+  const attrs = `${perdivel ? ' data-perdivel="1"' : ""}${ciclo ? ` data-ciclo="${esc(ciclo)}"` : ""}`;
   return `
-  <li class="row ${kind}${tier ? ` t-${tier}` : ""}" data-id="${id}" data-search="${esc(search)}">
+  <li class="row ${kind}${tier ? ` t-${tier}` : ""}" data-id="${id}" data-search="${esc(search)}"${attrs}>
     <button class="row-main" data-toggle="${id}" aria-pressed="false">
-      <span class="thumb">${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${esc(ph)}">` : `<span class="ph">${esc(ph)}</span>`}</span>
+      ${thumb ? `<span class="thumb">${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${esc(ph)}">` : `<span class="ph">${esc(ph)}</span>`}</span>` : ""}
       <span class="row-text">
         ${top ? `<span class="row-top">${top}</span>` : ""}
         <span class="row-title">${esc(name)}<span class="en">${esc(en)}</span></span>
@@ -47,7 +48,15 @@ export function itemRow(i) {
     id: i.id, name: i.name, en: i.en, kind: "is-item",
     img: itemImg(i.img), ph: initials(i.name),
     sub: bits.join('<span class="dot">·</span>'),
-    hasInfo: true, search: searchText(i), perdivel: !!i.perdivel
+    hasInfo: true, search: searchText(i), perdivel: !!i.perdivel, ciclo: i.ciclo
+  });
+}
+
+export function stepRow(s) {
+  return row({
+    id: s.id, name: s.name, kind: "is-step",
+    sub: esc(s.obs), thumb: false,
+    hasInfo: false, search: searchText(s), perdivel: !!s.perdivel, ciclo: s.ciclo
   });
 }
 
@@ -72,10 +81,12 @@ export function sectionBlock(sec, open) {
   } else {
     const byId = Object.fromEntries(sec.items.map(i => [i.id, i]));
     const groups = sec.groups ?? [{ label: "", ids: sec.items.map(i => i.id) }];
-    body = collectionCard(sec) + groups.map(g => `
+    const guide = sec.type === "guide";
+    const draw = guide ? stepRow : itemRow;
+    body = (guide ? (sec.intro ? `<p class="guide-intro">${esc(sec.intro)}</p>` : "") : collectionCard(sec)) + groups.map(g => `
       <div class="group">
         ${g.label ? `<h3 class="group-label">${esc(g.label)}</h3>` : ""}
-        <ul class="rows">${g.ids.map(id => itemRow(byId[id])).join("")}</ul>
+        <ul class="rows">${g.ids.map(id => draw(byId[id])).join("")}</ul>
       </div>`).join("");
   }
   return `

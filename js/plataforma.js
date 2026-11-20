@@ -2,7 +2,7 @@ import { prefs } from "./prefs.js";
 import { META, SECTIONS } from "./data/index.js";
 
 export const GAMERSCORE = META.gamerscore;
-const OUTROS = SECTIONS.reduce((a, s) => a + (s.type === "list" ? s.entries.length : 1), 0);
+const OUTROS = SECTIONS.reduce((a, s) => a + (s.type === "list" ? s.entries.length : s.type === "guide" ? 0 : 1), 0);
 
 const g = tier => `${GAMERSCORE[tier]}G`;
 

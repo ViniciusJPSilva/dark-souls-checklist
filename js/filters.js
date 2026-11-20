@@ -1,10 +1,15 @@
 import { $, $$, norm } from "./ui/dom.js";
 import { state } from "./store.js";
 
+export const CICLOS = ["NG", "NG+", "NG++"];
+const nivel = c => Math.max(0, CICLOS.indexOf(c ?? "NG"));
+
 export function applyFilters() {
   const q = norm($("#search").value.trim());
   const f = state.filter;
-  const filtering = !!q || f !== "all";
+  const ate = nivel(state.ciclo ?? "NG++");
+  const soPerdiveis = !!state.soPerdiveis;
+  const filtering = !!q || f !== "all" || ate < 2 || soPerdiveis;
   let any = false;
 
   for (const sec of $$(".section")) {
@@ -15,7 +20,10 @@ export function applyFilters() {
       let n = 0;
       for (const row of ul.children) {
         const done = row.classList.contains("is-done");
-        const ok = (f === "all" || (f === "done") === done) && (!q || titleHit || row.dataset.search.includes(q));
+        const ok = (f === "all" || (f === "done") === done)
+          && (!q || titleHit || row.dataset.search.includes(q))
+          && nivel(row.dataset.ciclo) <= ate
+          && (!soPerdiveis || row.dataset.perdivel === "1");
         row.hidden = !ok;
         if (ok) n++;
       }

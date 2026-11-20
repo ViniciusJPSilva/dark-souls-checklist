@@ -52,3 +52,15 @@ Os 33 gestos ficam em inglês, porque a Estus não traz uma tradução oficial d
 
 
 Também continuam em inglês alguns itens citados nas dicas: Storm Ruler, Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil e Purging Stone.
+
+## Plano de ciclos (fase 3)
+
+O roteiro em `js/data/ds3/plano.js` junta o que as fontes confirmam:
+
+- Três ciclos, com um final por ciclo: https://estus.com.br/wiki/dark-souls-3/jornada/platina
+- Versões +1 a partir do NG+, +2 e Anel da vida +3 no NG++: https://darksouls3.wiki.fextralife.com/Rings
+- O que passa para o NG+ e o que volta ao estado inicial: https://estus.com.br/wiki/dark-souls-3/guia/ng-plus
+- Conflito Sirris × Heysel/Rosaria em ciclos separados: https://darksouls3.wiki.fextralife.com/Trophy+and+Achievement+Guide
+- Pactos perdíveis, missão da Usurpação e backup do save antes da luta final: https://www.powerpyx.com/dark-souls-3-trophy-guide/
+
+A ordem dos finais no plano (Usurpação no primeiro ciclo, se a missão der certo) é uma sugestão, não uma regra do jogo.
