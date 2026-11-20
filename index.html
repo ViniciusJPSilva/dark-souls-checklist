@@ -94,8 +94,19 @@
     <nav class="chips" id="chips" aria-label="Seções"></nav>
   </div>
 
-  <main id="app" class="app"></main>
-  <p class="empty" id="empty" hidden>Nada encontrado.</p>
+  <div class="layout" id="layout">
+    <div class="layout-main">
+      <main id="app" class="app"></main>
+      <p class="empty" id="empty" hidden>Nada encontrado.</p>
+    </div>
+    <aside class="roteiro" id="roteiro" aria-label="Roteiro" hidden></aside>
+  </div>
+  <div class="rt-overlay" id="rtOverlay" hidden></div>
+  <button class="rt-fab" id="rtFab" aria-controls="roteiro" aria-expanded="false" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 10a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM6 11h9a2 2 0 0 0 0-4h-3V5h3a4 4 0 0 1 0 8H6a2 2 0 0 0 0 4h8v2H6a4 4 0 0 1 0-8z"/></svg>
+    <span>Roteiro</span>
+  </button>
 
   <footer class="foot">
     <p>Nomes dos troféus conforme a lista oficial em português (PSN/Xbox/Steam); magias, armas e locais conforme a tradução PT-BR do jogo. Imagens: Fextralife e PSNProfiles. O progresso fica salvo apenas neste navegador.</p>

@@ -12,6 +12,8 @@ import { estus } from "./estus.js";
 import { ossos } from "./ossos.js";
 import { plano } from "./plano.js";
 
+export { roteiro as ROTEIRO } from "./roteiro.js";
+
 export const SECTIONS = [historia, chefes, pactos, colecao, estus, ossos, infusoes, feiticos, piromancias, milagres, aneis, gestos, plano];
 
 export const META = {

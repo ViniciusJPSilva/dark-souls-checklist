@@ -10,6 +10,7 @@ import { openSheet, refreshSheet, sheetIsOpen, closeSheet, dialog, toast } from 
 import { trofeuDe, marcarEtapa, marcarTrofeu, BRAS } from "./reforco.js";
 import { reforcoBody, pillText, braseiroHTML } from "./ui/reforco.js";
 import { openGuia, onGuiaGoto } from "./ui/materiais.js";
+import { mountRoteiro, renderRoteiro } from "./ui/roteiro.js";
 import { plat, platId, tierLabel, cap, obtido, todosOutros, GAMERSCORE } from "./plataforma.js";
 
 const lookup = new Map();
@@ -182,6 +183,7 @@ let currentDetail = null;
 subscribe(reason => {
   if (reason === "reset") lastTrophies = null;
   sync({ announce: reason === "check" });
+  if (reason !== "pref") renderRoteiro();
   if (state.filter !== "all" || reason === "reset") applyFilters();
   if (sheetIsOpen() && currentDetail) {
     refreshSheet(detailFor(lookup.get(currentDetail), currentDetail));
@@ -280,7 +282,8 @@ menu.addEventListener("click", async e => {
     const id = e.target.closest("[data-plat]").dataset.plat;
     if (id === platId()) return;
     setPref("platform", id);
-    return mount();
+    mount();
+    return renderRoteiro();
   }
   setMenu(false);
 
@@ -319,3 +322,7 @@ menu.addEventListener("click", async e => {
 
 installImageFallback(document);
 mount();
+mountRoteiro({ isDone, toggle });
+
+const bar = $("#bar");
+new ResizeObserver(() => document.documentElement.style.setProperty("--bar-h", `${bar.offsetHeight}px`)).observe(bar);

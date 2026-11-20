@@ -64,3 +64,9 @@ O roteiro em `js/data/ds3/plano.js` junta o que as fontes confirmam:
 - Pactos perdíveis, missão da Usurpação e backup do save antes da luta final: https://www.powerpyx.com/dark-souls-3-trophy-guide/
 
 A ordem dos finais no plano (Usurpação no primeiro ciclo, se a missão der certo) é uma sugestão, não uma regra do jogo.
+
+## Roteiro (linha do tempo)
+
+- Ordem das áreas e chefes: https://darksouls3.wiki.fextralife.com/Game+Progress+Route (Cemitério → Muralha → Assentamento → Estrada → Forte de Farron → Catedral → Carthus → Irithyll → Calabouço → Capital Profanada → Anor Londo → Muralha/Dançarino → Castelo → Biblioteca → Fornalha, com Lago Ardente, Jardim, Túmulos e Pico como ramos opcionais).
+- Também consultado: o roteiro em PT da Estus (https://estus.com.br/wiki/dark-souls-3/jornada/primeira-jornada/muralha-subida).
+- Cada item entra na etapa da área onde fica (campo `local`). As transposições de almas entram na etapa seguinte ao chefe que dá a alma (com o Forno de Transposição liberado depois da Grande Madeira). Compras no Santuário, recompensas de pacto e itens iniciais ficam em "Sem prazo fixo".

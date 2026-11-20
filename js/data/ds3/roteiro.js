@@ -1,0 +1,40 @@
+export const roteiro = {
+  "fonte": "https://darksouls3.wiki.fextralife.com/Game+Progress+Route",
+  "nodes": [
+    { "id": "rt-iudex", "chefe": "t-iudex", "titulo": "Iudex Gundyr", "areas": ["Cemitério das Cinzas"] },
+    { "id": "rt-vordt", "chefe": "t-vordt", "titulo": "Vordt do Vale Boreal", "areas": ["Grande Muralha de Lothric"] },
+    { "id": "rt-madeira", "chefe": "t-madeira", "titulo": "Grande Madeira Apodrecida", "areas": ["Assentamento de Mortos-vivos"], "prazo": "Entre no pacto Criadores de Montes antes de derrotar a Grande Madeira." },
+    { "id": "rt-sabio", "chefe": "t-sabio", "titulo": "Sábio de Cristal", "areas": ["Estrada dos Sacrifícios"] },
+    { "id": "rt-vigilantes", "chefe": "t-vigilantes", "titulo": "Vigilantes do Abismo", "areas": ["Forte de Farron"], "prazo": "Entre no pacto Vigilantes de Farron antes: depois desta luta, um NPC pode matar o lobo." },
+    { "id": "rt-diaconos", "chefe": "t-diaconos", "titulo": "Diáconos das Profundezas", "areas": ["Catedral das Profundezas"] },
+    { "id": "rt-wolnir", "chefe": "t-wolnir", "titulo": "Alto Lorde Wolnir", "areas": ["Catacumbas de Carthus"] },
+    { "id": "rt-rei-demonio", "chefe": "t-rei-demonio", "titulo": "Antigo Rei Demônio", "areas": ["Lago Ardente"], "ramo": "Opcional · aberto a partir das Catacumbas de Carthus" },
+    { "id": "rt-sulyvahn", "chefe": "t-sulyvahn", "titulo": "Pontífice Sulyvahn", "areas": ["Irithyll do Vale Boreal"] },
+    { "id": "rt-yhorm", "chefe": "t-yhorm", "titulo": "Yhorm, o Gigante", "areas": ["Calabouço de Irithyll", "Capital Profanada"] },
+    { "id": "rt-aldrich", "chefe": "t-aldrich", "titulo": "Aldrich, o Devorador de Deuses", "areas": ["Anor Londo"] },
+    { "id": "rt-dancarino", "chefe": "t-dancarino", "titulo": "Dançarino do Vale Boreal", "areas": [] },
+    { "id": "rt-armadura", "chefe": "t-armadura", "titulo": "Armadura do Matador de Dragões", "areas": ["Castelo Lothric"] },
+    { "id": "rt-oceiros", "chefe": "t-oceiros", "titulo": "Oceiros, o Rei Decaído", "areas": ["Jardim do Rei Decaído"], "ramo": "Opcional · aberto a partir do Castelo Lothric" },
+    { "id": "rt-campeao", "chefe": "t-campeao", "titulo": "Campeão Gundyr", "areas": ["Túmulos Abandonados"], "ramo": "Opcional · depois de Oceiros" },
+    { "id": "rt-lothric", "chefe": "t-lothric", "titulo": "Lothric, Príncipe Mais Jovem", "areas": ["Grande Biblioteca"] },
+    { "id": "rt-wyvern", "chefe": "t-wyvern", "titulo": "Wyvern Ancião", "areas": ["Pico do Arquidragão"], "ramo": "Opcional · gesto Path of the Dragon, depois de Oceiros" },
+    { "id": "rt-rei-sem-nome", "chefe": "t-rei-sem-nome", "titulo": "O Rei Sem Nome", "areas": [], "ramo": "Opcional · no Pico do Arquidragão" },
+    { "id": "rt-final", "chefe": null, "titulo": "Alma das Cinzas e o final", "areas": ["Fornalha da Primeira Chama"], "prazo": "Faça backup do save antes da luta final se quiser repetir o fim do ciclo." }
+  ],
+  "apos": {
+    "a-pontiffs-left-eye": "rt-sabio",
+    "s-crystal-hail": "rt-vigilantes",
+    "s-deep-soul": "rt-wolnir",
+    "p-black-serpent": "rt-sulyvahn",
+    "p-chaos-bed-vestiges": "rt-sulyvahn",
+    "p-boulder-heave": "rt-sulyvahn",
+    "a-havels-ring": "rt-sulyvahn",
+    "m-lifehunt-scythe": "rt-dancarino",
+    "m-soothing-sunlight": "rt-armadura",
+    "s-white-dragon-breath": "rt-lothric",
+    "a-prisoners-chain": "rt-lothric",
+    "m-lightning-storm": "rt-final",
+    "m-sunlight-spear": "rt-final"
+  },
+  "semPrazo": "Sem prazo fixo: compras no Santuário, recompensas de pacto e o que se recebe no início. Vários pedem um pergaminho, tomo ou cinza entregue antes."
+};
