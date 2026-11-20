@@ -28,6 +28,27 @@ Os nomes dos troféus na Steam e na PSN em PT-BR são idênticos. A Estus diz qu
 - Infusões (15 joias): https://darksouls3.wiki.fextralife.com/Infusion
 - Fragmentos de Estus (11) e de osso (10): https://www.powerpyx.com/dark-souls-3-trophy-guide/
 
+## Coleções (fase 2)
+
+| Coleção | Itens | Fonte da lista e dos locais |
+|---|---|---|
+| Feitiços | 34 | https://darksouls3.wiki.fextralife.com/Sorceries (38 menos 4 de DLC; total de 34 confirmado no GamerGuides) |
+| Piromancias | 27 | https://darksouls3.wiki.fextralife.com/Pyromancies (30 menos 3 de DLC) |
+| Milagres | 35 | https://darksouls3.wiki.fextralife.com/Miracles (38 menos 3 de DLC) |
+| Anéis | 107 | https://darksouls3.wiki.fextralife.com/Rings (70 comuns + 20 versões +1 + 16 versões +2 + Anel da vida +3; sem DLC) |
+| Gestos | 33 | https://darksouls3.wiki.fextralife.com/Gestures |
+| Infusões | 15 | https://darksouls3.wiki.fextralife.com/Infusion (joias e hulhas) |
+| Fragmentos de Estus | 11 | https://darksouls3.wiki.fextralife.com/Estus+Shard |
+| Fragmentos de osso | 10 | https://darksouls3.wiki.fextralife.com/Undead+Bone+Shard |
+
+- A regra de que nada das DLCs conta vem de https://game-checklists.com/darksouls3/all-trophies/
+- Nomes em PT-BR de magias, anéis, joias, hulhas, pergaminhos, tomos, almas e chaves: catálogos da Estus (https://estus.com.br/wiki/dark-souls-3/magias, https://estus.com.br/wiki/dark-souls-3/arsenal?grupo=An%C3%A9is, https://estus.com.br/wiki/dark-souls-3/itens). Todos os 104 nomes de magias, os 71 anéis e as 15 joias foram encontrados.
+- Nomes de NPCs e áreas: https://estus.com.br/wiki/dark-souls-3/personagens e https://estus.com.br/wiki/dark-souls-3/chefes
+- Imagens: Fextralife (wiki do DS3).
+
 ## Nomes ainda em inglês
 
-Itens, gestos e fogueiras sem tradução oficial confirmada ficam em inglês: Storm Ruler, Path of the Dragon, Darkmoon Loyalty, Proper Bow, Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil, Purging Stone, Pale Tongue, Halfway Fortress e Church of Yorshka.
+Os 33 gestos ficam em inglês, porque a Estus não traz uma tradução oficial deles. Os nomes de fogueiras também ficam em inglês (Cliff Underside, Keep Ruins, Church of Yorshka etc.).
+
+
+Também continuam em inglês alguns itens citados nas dicas: Storm Ruler, Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil e Purging Stone.

@@ -74,7 +74,7 @@ export const pactos = {
       "desc": "Descubra o pacto dos Dedos de Rosaria.",
       "hint": "Entrar no pacto",
       "local": "Catedral das Profundezas",
-      "req": "Entrar no pacto não afeta nada. Subir de nível nele com uma Pale Tongue expulsa a Sirris do Santuário (anel e gesto dela ficam para outro ciclo).",
+      "req": "Entrar no pacto não afeta nada. Subir de nível nele com uma Língua Pálida expulsa a Sirris do Santuário (anel e gesto dela ficam para outro ciclo).",
       "obs": "Depois dos Diáconos, pegue o elevador até o telhado, desça para a sacada da nave e siga até Rosaria.",
       "done": false
     },

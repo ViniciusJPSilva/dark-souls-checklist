@@ -503,3 +503,8 @@ body[data-plat="xbox"] .tier:not(.t-platinum), body[data-plat="xbox"] .t-bronze 
 }
 .note.perdivel { border-left-color: var(--danger); }
 .note.perdivel strong { color: var(--danger); }
+
+.row-sub .ciclo {
+  display: inline-block; font: 500 10.5px/1 var(--display); letter-spacing: .1em;
+  color: var(--platinum); border: 1px solid rgb(169 210 232 / .4); border-radius: 999px; padding: 3px 7px;
+}

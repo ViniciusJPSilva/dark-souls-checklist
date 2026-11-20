@@ -8,7 +8,7 @@ export const tierSpan = (tier, cls = "") => {
   return label ? `<span class="tier${cls}">${esc(label)}</span>` : "";
 };
 
-export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint, o.perdivel && `perdivel ${o.perdivel}`].join(" "));
+export const searchText = o => norm([o.name, o.title, o.en, o.desc, o.npc, o.local, o.req, o.obs, o.hint, o.ciclo, o.perdivel && `perdivel ${o.perdivel}`].join(" "));
 
 export const checkIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>`;
 export const infoIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 10h2v7h-2zm0-3h2v2h-2zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>`;
@@ -42,12 +42,12 @@ export function entryRow(e) {
 }
 
 export function itemRow(i) {
-  const bits = [i.cost && `<span class="cost">${esc(i.cost)}</span>`, esc(i.local)].filter(Boolean);
+  const bits = [i.ciclo && `<span class="ciclo">${esc(i.ciclo)}</span>`, i.cost && `<span class="cost">${esc(i.cost)}</span>`, esc(i.local)].filter(Boolean);
   return row({
     id: i.id, name: i.name, en: i.en, kind: "is-item",
     img: itemImg(i.img), ph: initials(i.name),
     sub: bits.join('<span class="dot">·</span>'),
-    hasInfo: true, search: searchText(i)
+    hasInfo: true, search: searchText(i), perdivel: !!i.perdivel
   });
 }
 
@@ -96,7 +96,8 @@ export function detailHTML(o, { done, auto, final = false }) {
     o.hint && ["Objetivo", o.hint],
     o.cost && ["Custo", o.cost.includes("almas") || o.cost === "Varia" ? o.cost : `${o.cost} almas`],
     o.npc && ["NPC", o.npc],
-    o.local && ["Local", o.local]
+    o.local && ["Local", o.local],
+    o.ciclo && ["Ciclo", o.ciclo === "NG+" ? "NG+ (segundo ciclo) em diante" : "NG++ (terceiro ciclo) em diante"]
   ].filter(Boolean);
   return `
     <div class="d-head">

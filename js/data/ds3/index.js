@@ -2,8 +2,16 @@ import { historia } from "./historia.js";
 import { chefes } from "./chefes.js";
 import { pactos } from "./pactos.js";
 import { colecao } from "./colecao.js";
+import { feiticos } from "./feiticos.js";
+import { piromancias } from "./piromancias.js";
+import { milagres } from "./milagres.js";
+import { aneis } from "./aneis.js";
+import { gestos } from "./gestos.js";
+import { infusoes } from "./infusoes.js";
+import { estus } from "./estus.js";
+import { ossos } from "./ossos.js";
 
-export const SECTIONS = [historia, chefes, pactos, colecao];
+export const SECTIONS = [historia, chefes, pactos, colecao, estus, ossos, infusoes, feiticos, piromancias, milagres, aneis, gestos];
 
 export const META = {
   "storageKey": "ds3-checklist:v1",
