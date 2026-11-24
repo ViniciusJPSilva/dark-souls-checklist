@@ -243,7 +243,7 @@ export const milagres = {
       "en": "Lightning Blade",
       "img": "3/35/Lightning_blade-icon.png",
       "local": "Calabouço de Irithyll",
-      "obs": "Perto da estátua de dragão usada para ir ao Pico do Arquidragão.",
+      "obs": "Perto da estátua de dragão usada para ir ao Pico dos Arquidragões.",
       "done": false
     },
     {
@@ -271,7 +271,7 @@ export const milagres = {
       "name": "Barreira mágica grande",
       "en": "Great Magic Barrier",
       "img": "e/e0/Great_magic_barrier-icon.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Descendo de uma borda perto de onde ficam Havel e um dragão morto.",
       "done": false
     },

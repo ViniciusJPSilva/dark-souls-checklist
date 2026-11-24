@@ -46,12 +46,9 @@ Os nomes dos troféus na Steam e na PSN em PT-BR são idênticos. A Estus diz qu
 - Nomes de NPCs e áreas: https://estus.com.br/wiki/dark-souls-3/personagens e https://estus.com.br/wiki/dark-souls-3/chefes
 - Imagens: Fextralife (wiki do DS3).
 
-## Nomes ainda em inglês
+## Nomes em inglês
 
-Os 33 gestos ficam em inglês, porque a Estus não traz uma tradução oficial deles. Os nomes de fogueiras também ficam em inglês (Cliff Underside, Keep Ruins, Church of Yorshka etc.).
-
-
-Também continuam em inglês alguns itens citados nas dicas: Eyes of a Fire Keeper, Fire Keeper Soul, Dark Sigil e Purging Stone.
+Não sobrou nenhum nome em inglês nos textos do DS3; o campo `en` de cada item guarda o nome original. Veja a seção "Texto oficial do jogo em PT-BR" no fim.
 
 ## Plano de ciclos (fase 3)
 
@@ -93,5 +90,17 @@ A ordem dos finais no plano (Usurpação no primeiro ciclo, se a missão der cer
 ## Pendências conferidas em 23/11/2026
 
 - **Pacto Lâmina da Lua Negra sem o gesto:** confirmado. Matar Yorshka dá o item do pacto, mas impede subir de nível nele até o NG+ e pode deixar Sirris hostil. Fontes: https://darksouls3.wiki.fextralife.com/Blades_of_the_Darkmoon e https://darksouls3.wiki.fextralife.com/Company_Captain_Yorshka
-- **Gestos e fogueiras:** sem fonte com os nomes oficiais em PT-BR. A Estus, a Fandom PT e os guias brasileiros encontrados usam os nomes em inglês ou traduções informais. Continuam em inglês até uma checagem dentro do jogo.
-- **"Ajuda curtativa" (Heal Aid):** é o nome no catálogo da Estus, inclusive na URL da página. Nenhuma outra fonte em PT foi encontrada para confirmar se o erro vem da tradução do jogo ou da Estus. Mantido como está até uma checagem dentro do jogo.
+- **Gestos e fogueiras:** resolvido com o texto oficial do jogo (veja abaixo).
+- **"Ajuda curtativa" (Heal Aid):** é o nome oficial do jogo em PT-BR, com o erro de digitação da própria tradução. Mantido.
+
+## Texto oficial do jogo em PT-BR (conferido em 23/11/2026)
+
+Nomes de gestos, fogueiras, áreas, NPCs, magias, anéis e itens foram conferidos no texto oficial do DS3 em português do Brasil (`porBR`), extraído dos arquivos do jogo e publicado em https://github.com/mrexodia/DarkSouls3.TextViewer (arquivo `ds3.json`, com os 13 idiomas).
+
+- Todas as 104 magias, os 107 anéis, as 15 joias e os itens-chave que vieram da Estus batem com o texto oficial.
+- Os 33 gestos agora usam os nomes oficiais, por exemplo Lealdade da Lua Negra, Reverência cortês e Caminho do Dragão. O jogo usa "Chamar" para dois gestos diferentes (Beckon e Call over) e escreve "Agacharmento do Patches"; os dois foram mantidos como estão no jogo.
+- As fogueiras citadas nas dicas usam os nomes oficiais. Alguns diferem bastante do inglês: Halfway Fortress é "Acampamento na Floresta" e Tower on the Wall é "Torreta do Castelo Lothric".
+- A área Archdragon Peak é "Pico dos Arquidragões" no jogo. O troféu continua "Pico do Arquidragão", que é o nome oficial do troféu.
+- NPCs com nomes oficiais corrigidos: Heysel, o Dedo Amarelo; Gotthard, o Mão Negra; Tsorig, o Matador de Cavaleiros.
+- Itens que estavam em inglês nas dicas: Olhos de Guardiã do Fogo, Alma de Guardiã do Fogo, Símbolo das Trevas e Pedra da purificação.
+- Inimigos comuns (Pus de Homem, Cavaleiro Alado etc.) não estão nesse arquivo; seguem com a descrição em PT escrita para o site.

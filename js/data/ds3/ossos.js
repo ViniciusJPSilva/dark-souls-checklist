@@ -15,7 +15,7 @@ export const ossos = {
       "en": "Undead Bone Shard 1",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Da fogueira Dilapidated Bridge, perto da bétula branca onde o gigante atira flechas; pule para a plataforma à direita.",
+      "obs": "Da fogueira Ponte Dilapidada, perto da bétula branca onde o gigante atira flechas; pule para a plataforma à direita.",
       "done": false
     },
     {
@@ -24,7 +24,7 @@ export const ossos = {
       "en": "Undead Bone Shard 2",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Forte de Farron",
-      "obs": "Da fogueira Keep Ruins, antes da porta das três chamas, vá à direita até a torre cheia de lesmas; está no centro.",
+      "obs": "Da fogueira Ruínas de Fortaleza, antes da porta das três chamas, vá à direita até a torre cheia de lesmas; está no centro.",
       "done": false
     },
     {
@@ -33,7 +33,7 @@ export const ossos = {
       "en": "Undead Bone Shard 3",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Catedral das Profundezas",
-      "obs": "Da Cleansing Chapel, atravesse o cemitério e a ponte, suba a escada depois do Guardião de Túmulos; fica numa lápide sobre um vão, perto da bétula branca.",
+      "obs": "Da Capela Purificadora, atravesse o cemitério e a ponte, suba a escada depois do Guardião de Túmulos; fica numa lápide sobre um vão, perto da bétula branca.",
       "done": false
     },
     {
@@ -42,7 +42,7 @@ export const ossos = {
       "en": "Undead Bone Shard 4",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Catacumbas de Carthus",
-      "obs": "Da fogueira Abyss Watchers, desça pelas plataformas, mate o esqueleto de chapéu à direita e deixe a Bola de Esqueletos quebrar na parede.",
+      "obs": "Da fogueira Vigilantes do Abismo, desça pelas plataformas, mate o esqueleto de chapéu à direita e deixe a Bola de Esqueletos quebrar na parede.",
       "done": false
     },
     {
@@ -60,7 +60,7 @@ export const ossos = {
       "en": "Undead Bone Shard 6",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Lago Ardente",
-      "obs": "Da fogueira Demon Ruins, desça para o salão com bolas de fogo e demônios; fica no fundo à esquerda, perto dos corpos de demônios.",
+      "obs": "Da fogueira Ruínas do Demônio, desça para o salão com bolas de fogo e demônios; fica no fundo à esquerda, perto dos corpos de demônios.",
       "done": false
     },
     {
@@ -69,7 +69,7 @@ export const ossos = {
       "en": "Undead Bone Shard 7",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Da fogueira Church of Yorshka, desça a escada do corredor e siga à direita pela beira do penhasco; atrás da lápide grande no fim.",
+      "obs": "Da fogueira Igreja de Yorshka, desça a escada do corredor e siga à direita pela beira do penhasco; atrás da lápide grande no fim.",
       "done": false
     },
     {
@@ -87,7 +87,7 @@ export const ossos = {
       "en": "Undead Bone Shard 9",
       "img": "4/44/Undead_bone_shard.png",
       "local": "Castelo Lothric",
-      "obs": "Da fogueira Dragon Barracks, atravesse quase toda a ponte dos dois dragões e desça no fim; fica embaixo da ponte.",
+      "obs": "Da fogueira Casernas do Dragão, atravesse quase toda a ponte dos dois dragões e desça no fim; fica embaixo da ponte.",
       "done": false
     },
     {

@@ -123,7 +123,7 @@ export const piromancias = {
       "en": "Sacred Flame",
       "img": "5/5a/Sacred_flame-icon.png",
       "local": "Lago Ardente",
-      "obs": "Na área de lava do Lago Ardente onde se enfrenta o Cavaleiro Matador Tsorig.",
+      "obs": "Na área de lava do Lago Ardente onde se enfrenta o Tsorig, o Matador de Cavaleiros.",
       "done": false
     },
     {

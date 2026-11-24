@@ -24,7 +24,7 @@ export const estus = {
       "en": "Estus Shard 2",
       "img": "d/dd/EstusShard.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Junto à árvore em chamas com mortos-vivos em adoração, à esquerda da fogueira Undead Settlement.",
+      "obs": "Junto à árvore em chamas com mortos-vivos em adoração, à esquerda da fogueira Assentamento de Mortos-vivos.",
       "done": false
     },
     {
@@ -33,7 +33,7 @@ export const estus = {
       "en": "Estus Shard 3",
       "img": "d/dd/EstusShard.png",
       "local": "Estrada dos Sacrifícios",
-      "obs": "Da fogueira Crucifixion Woods, rumo ao Sábio de Cristal: passe sob a pontezinha; fica à esquerda das ruínas, perto de uma fogueira com dois Licantropos.",
+      "obs": "Da fogueira Bosque da Crucificação, rumo ao Sábio de Cristal: passe sob a pontezinha; fica à esquerda das ruínas, perto de uma fogueira com dois Licantropos.",
       "done": false
     },
     {
@@ -51,7 +51,7 @@ export const estus = {
       "en": "Estus Shard 5",
       "img": "d/dd/EstusShard.png",
       "local": "Catedral das Profundezas",
-      "obs": "Logo na saída da fogueira Cleansing Chapel, onde os inimigos estão rezando.",
+      "obs": "Logo na saída da fogueira Capela Purificadora, onde os inimigos estão rezando.",
       "done": false
     },
     {
@@ -60,7 +60,7 @@ export const estus = {
       "en": "Estus Shard 6",
       "img": "d/dd/EstusShard.png",
       "local": "Lago Ardente",
-      "obs": "Num corpo perto de um buraco: na sala da fogueira Old King's Antechamber há uma parede ilusória; siga pelo corredor escondido à esquerda.",
+      "obs": "Num corpo perto de um buraco: na sala da fogueira Antecâmara do Antigo Rei há uma parede ilusória; siga pelo corredor escondido à esquerda.",
       "done": false
     },
     {
@@ -87,7 +87,7 @@ export const estus = {
       "en": "Estus Shard 9",
       "img": "d/dd/EstusShard.png",
       "local": "Grande Muralha de Lothric",
-      "obs": "Da fogueira Dancer of the Boreal Valley, suba a escada, vá à esquerda, pegue o elevador e pule numa borda no meio da descida; desça a escada à direita.",
+      "obs": "Da fogueira Dançarina do Vale Boreal, suba a escada, vá à esquerda, pegue o elevador e pule numa borda no meio da descida; desça a escada à direita.",
       "done": false
     },
     {

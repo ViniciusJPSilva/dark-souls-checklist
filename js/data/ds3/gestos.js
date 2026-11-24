@@ -7,11 +7,11 @@ export const gestos = {
   "icon": "d91cdebbfac48ca4d87a96c9cc9f3ca0992fff31.jpg",
   "en": "Master of Expression",
   "desc": "Aprenda todos os gestos.",
-  "req": "Os 33 gestos. Proper bow (pacto de Rosaria) e Darkmoon Loyalty (Sirris) não saem no mesmo ciclo. Os nomes ficam em inglês porque não há tradução oficial confirmada.",
+  "req": "Os 33 gestos. Reverência cortês (pacto de Rosaria) e Lealdade da Lua Negra (Sirris) não saem no mesmo ciclo. No jogo em PT-BR, dois gestos se chamam Chamar (Beckon e Call over).",
   "items": [
     {
       "id": "g-point-forward",
-      "name": "Point forward",
+      "name": "Apontar para frente",
       "en": "Point forward",
       "img": "2/22/~point_forward.png",
       "local": "Início",
@@ -20,7 +20,7 @@ export const gestos = {
     },
     {
       "id": "g-point-up",
-      "name": "Point up",
+      "name": "Apontar para cima",
       "en": "Point up",
       "img": "5/54/~point_up.png",
       "local": "Início",
@@ -29,7 +29,7 @@ export const gestos = {
     },
     {
       "id": "g-point-down",
-      "name": "Point down",
+      "name": "Apontar para baixo",
       "en": "Point down",
       "img": "2/2b/~point_down.png",
       "local": "Início",
@@ -38,7 +38,7 @@ export const gestos = {
     },
     {
       "id": "g-wave",
-      "name": "Wave",
+      "name": "Acenar",
       "en": "Wave",
       "img": "f/fe/~wave.png",
       "local": "Início",
@@ -47,7 +47,7 @@ export const gestos = {
     },
     {
       "id": "g-beckon",
-      "name": "Beckon",
+      "name": "Chamar",
       "en": "Beckon",
       "img": "e/ee/Beckon.png",
       "local": "Santuário do Elo de Fogo",
@@ -56,7 +56,7 @@ export const gestos = {
     },
     {
       "id": "g-call-over",
-      "name": "Call over",
+      "name": "Chamar",
       "en": "Call over",
       "img": "c/c7/Call_over.png",
       "local": "Santuário do Elo de Fogo",
@@ -65,7 +65,7 @@ export const gestos = {
     },
     {
       "id": "g-welcome",
-      "name": "Welcome",
+      "name": "Boas-Vindas",
       "en": "Welcome",
       "img": "4/42/Welcome.png",
       "local": "Santuário do Elo de Fogo",
@@ -74,7 +74,7 @@ export const gestos = {
     },
     {
       "id": "g-applause",
-      "name": "Applause",
+      "name": "Aplaudir",
       "en": "Applause",
       "img": "4/4f/Applause.png",
       "local": "Santuário do Elo de Fogo",
@@ -84,17 +84,17 @@ export const gestos = {
     },
     {
       "id": "g-quiet-resolve",
-      "name": "Quiet Resolve",
+      "name": "Quieta determinação",
       "en": "Quiet Resolve",
       "img": "b/b0/Quiet_resolve.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Presente de Anri de Astora perto da fogueira Church of Yorshka, seguindo a missão.",
+      "obs": "Presente de Anri de Astora perto da fogueira Igreja de Yorshka, seguindo a missão.",
       "perdivel": "Depende da missão de Anri; se falhar, pegue no próximo ciclo.",
       "done": false
     },
     {
       "id": "g-jump-for-joy",
-      "name": "Jump for joy",
+      "name": "Pular de alegria",
       "en": "Jump for joy",
       "img": "6/68/Jump_for_joy.png",
       "local": "Início",
@@ -103,7 +103,7 @@ export const gestos = {
     },
     {
       "id": "g-joy",
-      "name": "Joy",
+      "name": "Alegria",
       "en": "Joy",
       "img": "4/4e/~joy.png",
       "local": "Início",
@@ -112,17 +112,17 @@ export const gestos = {
     },
     {
       "id": "g-rejoice",
-      "name": "Rejoice",
+      "name": "Regozijar-se",
       "en": "Rejoice",
       "img": "1/19/Rejoice.png",
       "local": "Catedral das Profundezas",
-      "obs": "Presente de Siegward de Catarina depois de devolver a armadura dele, do lado de fora da Cleansing Chapel.",
+      "obs": "Presente de Siegward de Catarina depois de devolver a armadura dele, do lado de fora da Capela Purificadora.",
       "perdivel": "Depende da missão de Siegward; se falhar, pegue no próximo ciclo.",
       "done": false
     },
     {
       "id": "g-hurrah",
-      "name": "Hurrah!",
+      "name": "Viva!",
       "en": "Hurrah!",
       "img": "a/a3/Hurrah%21.png",
       "local": "Santuário do Elo de Fogo",
@@ -131,7 +131,7 @@ export const gestos = {
     },
     {
       "id": "g-praise-the-sun",
-      "name": "Praise the Sun",
+      "name": "Glória ao Sol",
       "en": "Praise the Sun",
       "img": "e/eb/Praise_the_sun.png",
       "local": "Castelo Lothric",
@@ -140,16 +140,16 @@ export const gestos = {
     },
     {
       "id": "g-my-thanks",
-      "name": "My thanks!",
+      "name": "Agradeço!",
       "en": "My thanks!",
       "img": "6/68/My_thanks%21.png",
       "local": "Catacumbas de Carthus",
-      "obs": "Ao matar ou ser morto pelo Cavaleiro Matador Tsorig, invasor nas Catacumbas ou NPC no Lago Ardente.",
+      "obs": "Ao matar ou ser morto pelo Tsorig, o Matador de Cavaleiros, invasor nas Catacumbas ou NPC no Lago Ardente.",
       "done": false
     },
     {
       "id": "g-bow",
-      "name": "Bow",
+      "name": "Reverência",
       "en": "Bow",
       "img": "c/c8/~bow.png",
       "local": "Início",
@@ -158,17 +158,17 @@ export const gestos = {
     },
     {
       "id": "g-proper-bow",
-      "name": "Proper bow",
+      "name": "Reverência cortês",
       "en": "Proper bow",
       "img": "a/a2/Proper_bow.png",
       "local": "Forte de Farron",
-      "obs": "Invoque Heysel Dedo-amarelo no Forte de Farron; o sinal só aparece depois de oferecer uma Língua Pálida a Rosaria.",
-      "perdivel": "Oferecer a Língua Pálida expulsa Sirris; faça em outro ciclo que não o do Darkmoon Loyalty.",
+      "obs": "Invoque Heysel, o Dedo Amarelo no Forte de Farron; o sinal só aparece depois de oferecer uma Língua Pálida a Rosaria.",
+      "perdivel": "Oferecer a Língua Pálida expulsa Sirris; faça em outro ciclo que não o do Lealdade da Lua Negra.",
       "done": false
     },
     {
       "id": "g-dignified-bow",
-      "name": "Dignified bow",
+      "name": "Reverência digna",
       "en": "Dignified bow",
       "img": "c/c3/Dignified_bow.png",
       "local": "Santuário do Elo de Fogo",
@@ -178,17 +178,17 @@ export const gestos = {
     },
     {
       "id": "g-duel-bow",
-      "name": "Duel bow",
+      "name": "Reverência de duelo",
       "en": "Duel bow",
       "img": "0/0d/Duel_bow.png",
       "local": "Forte de Farron",
-      "obs": "Invoque a Sombra Pálida de Londor com cinco Sinais Sombrios, perto da fogueira Farron Keep Perimeter (antes dos Vigilantes do Abismo).",
-      "perdivel": "Pede cinco Sinais Sombrios e precisa ser feito antes dos Vigilantes do Abismo ou de Pontífice Sulyvahn.",
+      "obs": "Invoque a Sombra Pálida de Londor com cinco Símbolos das Trevas, perto da fogueira Perímetro da Fortaleza de Farron (antes dos Vigilantes do Abismo).",
+      "perdivel": "Pede cinco Símbolos das Trevas e precisa ser feito antes dos Vigilantes do Abismo ou de Pontífice Sulyvahn.",
       "done": false
     },
     {
       "id": "g-legion-etiquette",
-      "name": "Legion Etiquette",
+      "name": "Etiqueta da Legião",
       "en": "Legion Etiquette",
       "img": "5/56/Legion_etiquette.png",
       "local": "Forte de Farron",
@@ -197,27 +197,27 @@ export const gestos = {
     },
     {
       "id": "g-darkmoon-loyalty",
-      "name": "Darkmoon Loyalty",
+      "name": "Lealdade da Lua Negra",
       "en": "Darkmoon Loyalty",
       "img": "e/ec/Darkmoon_loyalty.png",
       "local": "Santuário do Elo de Fogo",
       "obs": "Fale com Sirris dos Reinos do Sol Ausente no Santuário depois de entregar as Cinzas de caçador de sonhos à Serva.",
-      "perdivel": "Some se Sirris sair do Santuário (pacto de Rosaria com Língua Pálida). Não sai no mesmo ciclo do Proper bow.",
+      "perdivel": "Some se Sirris sair do Santuário (pacto de Rosaria com Língua Pálida). Não sai no mesmo ciclo do Reverência cortês.",
       "done": false
     },
     {
       "id": "g-by-my-sword",
-      "name": "By my sword",
+      "name": "Pela minha espada",
       "en": "By my sword",
       "img": "8/87/By_my_sword.png",
       "local": "Forte de Farron",
-      "obs": "Invoque Gotthard Mão-negra antes dos Vigilantes do Abismo ou de Pontífice Sulyvahn.",
+      "obs": "Invoque Gotthard, o Mão Negra antes dos Vigilantes do Abismo ou de Pontífice Sulyvahn.",
       "perdivel": "Só enquanto o sinal de Gotthard estiver disponível; se perder, faça no próximo ciclo.",
       "done": false
     },
     {
       "id": "g-prayer",
-      "name": "Prayer",
+      "name": "Prece",
       "en": "Prayer",
       "img": "3/32/Prayer.png",
       "local": "Assentamento de Mortos-vivos",
@@ -226,7 +226,7 @@ export const gestos = {
     },
     {
       "id": "g-silent-ally",
-      "name": "Silent Ally",
+      "name": "Aliado silencioso",
       "en": "Silent Ally",
       "img": "9/95/Silent_ally.png",
       "local": "Santuário do Elo de Fogo",
@@ -236,7 +236,7 @@ export const gestos = {
     },
     {
       "id": "g-rest",
-      "name": "Rest",
+      "name": "Descansar",
       "en": "Rest",
       "img": "b/b0/~rest.png",
       "local": "Início",
@@ -245,7 +245,7 @@ export const gestos = {
     },
     {
       "id": "g-collapse",
-      "name": "Collapse",
+      "name": "Desmaiar",
       "en": "Collapse",
       "img": "2/27/~collapse.png",
       "local": "Santuário do Elo de Fogo",
@@ -254,7 +254,7 @@ export const gestos = {
     },
     {
       "id": "g-patches-squat",
-      "name": "Patches Squat",
+      "name": "Agacharmento do Patches",
       "en": "Patches Squat",
       "img": "2/20/Patches_squat.png",
       "local": "Santuário do Elo de Fogo",
@@ -264,7 +264,7 @@ export const gestos = {
     },
     {
       "id": "g-prostration",
-      "name": "Prostration",
+      "name": "Prostrar-se",
       "en": "Prostration",
       "img": "0/03/Prostration.png",
       "local": "Santuário do Elo de Fogo",
@@ -274,27 +274,27 @@ export const gestos = {
     },
     {
       "id": "g-toast",
-      "name": "Toast",
+      "name": "Brindar",
       "en": "Toast",
       "img": "3/32/Toast.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Presente de Siegward de Catarina depois de derrotar o Demônio, ou na cozinha perto da fogueira Distant Manor.",
+      "obs": "Presente de Siegward de Catarina depois de derrotar o Demônio, ou na cozinha perto da fogueira Castelo Distante.",
       "perdivel": "Depende da missão de Siegward; se falhar, pegue no próximo ciclo.",
       "done": false
     },
     {
       "id": "g-sleep",
-      "name": "Sleep",
+      "name": "Dormir",
       "en": "Sleep",
       "img": "3/37/Sleep.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Presente de Siegward de Catarina logo depois do Toast.",
+      "obs": "Presente de Siegward de Catarina logo depois do Brindar.",
       "perdivel": "Depende da missão de Siegward; se falhar, pegue no próximo ciclo.",
       "done": false
     },
     {
       "id": "g-curl-up",
-      "name": "Curl up",
+      "name": "Enroscar-se",
       "en": "Curl up",
       "img": "8/80/Curl_up.png",
       "local": "Santuário do Elo de Fogo",
@@ -304,20 +304,20 @@ export const gestos = {
     },
     {
       "id": "g-stretch-out",
-      "name": "Stretch out",
+      "name": "Esticar-se",
       "en": "Stretch out",
       "img": "0/0a/Stretch_out.png",
       "local": "Capital Profanada",
-      "obs": "No corpo de Gilligan, o fabricante de escadas, ao lado da fogueira Profaned Capital.",
+      "obs": "No corpo de Gilligan, o fabricante de escadas, ao lado da fogueira Capital Profanada.",
       "done": false
     },
     {
       "id": "g-path-of-the-dragon",
-      "name": "Path of the Dragon",
+      "name": "Caminho do Dragão",
       "en": "Path of the Dragon",
       "img": "1/18/Path_of_the_dragon.png",
       "local": "Jardim do Rei Decaído",
-      "obs": "Num corpo de Cavaleiro de Sangue de Dragão no corredor depois de Oceiros. Abre o caminho para o Pico do Arquidragão.",
+      "obs": "Num corpo de Cavaleiro de Sangue de Dragão no corredor depois de Oceiros. Abre o caminho para o Pico dos Arquidragões.",
       "done": false
     }
   ]

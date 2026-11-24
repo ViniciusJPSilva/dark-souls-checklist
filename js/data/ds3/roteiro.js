@@ -1,25 +1,163 @@
 export const roteiro = {
   "fonte": "https://darksouls3.wiki.fextralife.com/Game+Progress+Route",
   "nodes": [
-    { "id": "rt-iudex", "chefe": "t-iudex", "titulo": "Iudex Gundyr", "areas": ["Cemitério das Cinzas"] },
-    { "id": "rt-vordt", "chefe": "t-vordt", "titulo": "Vordt do Vale Boreal", "areas": ["Grande Muralha de Lothric"] },
-    { "id": "rt-madeira", "chefe": "t-madeira", "titulo": "Grande Madeira Apodrecida", "areas": ["Assentamento de Mortos-vivos"], "prazo": "Entre no pacto Criadores de Montes antes de derrotar a Grande Madeira." },
-    { "id": "rt-sabio", "chefe": "t-sabio", "titulo": "Sábio de Cristal", "areas": ["Estrada dos Sacrifícios"] },
-    { "id": "rt-vigilantes", "chefe": "t-vigilantes", "titulo": "Vigilantes do Abismo", "areas": ["Forte de Farron"], "prazo": "Entre no pacto Vigilantes de Farron antes: depois desta luta, um NPC pode matar o lobo." },
-    { "id": "rt-diaconos", "chefe": "t-diaconos", "titulo": "Diáconos das Profundezas", "areas": ["Catedral das Profundezas"] },
-    { "id": "rt-wolnir", "chefe": "t-wolnir", "titulo": "Alto Lorde Wolnir", "areas": ["Catacumbas de Carthus"] },
-    { "id": "rt-rei-demonio", "chefe": "t-rei-demonio", "titulo": "Antigo Rei Demônio", "areas": ["Lago Ardente"], "ramo": "Opcional · aberto a partir das Catacumbas de Carthus" },
-    { "id": "rt-sulyvahn", "chefe": "t-sulyvahn", "titulo": "Pontífice Sulyvahn", "areas": ["Irithyll do Vale Boreal"] },
-    { "id": "rt-yhorm", "chefe": "t-yhorm", "titulo": "Yhorm, o Gigante", "areas": ["Calabouço de Irithyll", "Capital Profanada"] },
-    { "id": "rt-aldrich", "chefe": "t-aldrich", "titulo": "Aldrich, o Devorador de Deuses", "areas": ["Anor Londo"] },
-    { "id": "rt-dancarino", "chefe": "t-dancarino", "titulo": "Dançarino do Vale Boreal", "areas": [] },
-    { "id": "rt-armadura", "chefe": "t-armadura", "titulo": "Armadura do Matador de Dragões", "areas": ["Castelo Lothric"] },
-    { "id": "rt-oceiros", "chefe": "t-oceiros", "titulo": "Oceiros, o Rei Decaído", "areas": ["Jardim do Rei Decaído"], "ramo": "Opcional · aberto a partir do Castelo Lothric" },
-    { "id": "rt-campeao", "chefe": "t-campeao", "titulo": "Campeão Gundyr", "areas": ["Túmulos Abandonados"], "ramo": "Opcional · depois de Oceiros" },
-    { "id": "rt-lothric", "chefe": "t-lothric", "titulo": "Lothric, Príncipe Mais Jovem", "areas": ["Grande Biblioteca"] },
-    { "id": "rt-wyvern", "chefe": "t-wyvern", "titulo": "Wyvern Ancião", "areas": ["Pico do Arquidragão"], "ramo": "Opcional · gesto Path of the Dragon, depois de Oceiros" },
-    { "id": "rt-rei-sem-nome", "chefe": "t-rei-sem-nome", "titulo": "O Rei Sem Nome", "areas": [], "ramo": "Opcional · no Pico do Arquidragão" },
-    { "id": "rt-final", "chefe": null, "titulo": "Alma das Cinzas e o final", "areas": ["Fornalha da Primeira Chama"], "prazo": "Faça backup do save antes da luta final se quiser repetir o fim do ciclo." }
+    {
+      "id": "rt-iudex",
+      "chefe": "t-iudex",
+      "titulo": "Iudex Gundyr",
+      "areas": [
+        "Cemitério das Cinzas"
+      ]
+    },
+    {
+      "id": "rt-vordt",
+      "chefe": "t-vordt",
+      "titulo": "Vordt do Vale Boreal",
+      "areas": [
+        "Grande Muralha de Lothric"
+      ]
+    },
+    {
+      "id": "rt-madeira",
+      "chefe": "t-madeira",
+      "titulo": "Grande Madeira Apodrecida",
+      "areas": [
+        "Assentamento de Mortos-vivos"
+      ],
+      "prazo": "Entre no pacto Criadores de Montes antes de derrotar a Grande Madeira."
+    },
+    {
+      "id": "rt-sabio",
+      "chefe": "t-sabio",
+      "titulo": "Sábio de Cristal",
+      "areas": [
+        "Estrada dos Sacrifícios"
+      ]
+    },
+    {
+      "id": "rt-vigilantes",
+      "chefe": "t-vigilantes",
+      "titulo": "Vigilantes do Abismo",
+      "areas": [
+        "Forte de Farron"
+      ],
+      "prazo": "Entre no pacto Vigilantes de Farron antes: depois desta luta, um NPC pode matar o lobo."
+    },
+    {
+      "id": "rt-diaconos",
+      "chefe": "t-diaconos",
+      "titulo": "Diáconos das Profundezas",
+      "areas": [
+        "Catedral das Profundezas"
+      ]
+    },
+    {
+      "id": "rt-wolnir",
+      "chefe": "t-wolnir",
+      "titulo": "Alto Lorde Wolnir",
+      "areas": [
+        "Catacumbas de Carthus"
+      ]
+    },
+    {
+      "id": "rt-rei-demonio",
+      "chefe": "t-rei-demonio",
+      "titulo": "Antigo Rei Demônio",
+      "areas": [
+        "Lago Ardente"
+      ],
+      "ramo": "Opcional · aberto a partir das Catacumbas de Carthus"
+    },
+    {
+      "id": "rt-sulyvahn",
+      "chefe": "t-sulyvahn",
+      "titulo": "Pontífice Sulyvahn",
+      "areas": [
+        "Irithyll do Vale Boreal"
+      ]
+    },
+    {
+      "id": "rt-yhorm",
+      "chefe": "t-yhorm",
+      "titulo": "Yhorm, o Gigante",
+      "areas": [
+        "Calabouço de Irithyll",
+        "Capital Profanada"
+      ]
+    },
+    {
+      "id": "rt-aldrich",
+      "chefe": "t-aldrich",
+      "titulo": "Aldrich, o Devorador de Deuses",
+      "areas": [
+        "Anor Londo"
+      ]
+    },
+    {
+      "id": "rt-dancarino",
+      "chefe": "t-dancarino",
+      "titulo": "Dançarino do Vale Boreal",
+      "areas": []
+    },
+    {
+      "id": "rt-armadura",
+      "chefe": "t-armadura",
+      "titulo": "Armadura do Matador de Dragões",
+      "areas": [
+        "Castelo Lothric"
+      ]
+    },
+    {
+      "id": "rt-oceiros",
+      "chefe": "t-oceiros",
+      "titulo": "Oceiros, o Rei Decaído",
+      "areas": [
+        "Jardim do Rei Decaído"
+      ],
+      "ramo": "Opcional · aberto a partir do Castelo Lothric"
+    },
+    {
+      "id": "rt-campeao",
+      "chefe": "t-campeao",
+      "titulo": "Campeão Gundyr",
+      "areas": [
+        "Túmulos Abandonados"
+      ],
+      "ramo": "Opcional · depois de Oceiros"
+    },
+    {
+      "id": "rt-lothric",
+      "chefe": "t-lothric",
+      "titulo": "Lothric, Príncipe Mais Jovem",
+      "areas": [
+        "Grande Biblioteca"
+      ]
+    },
+    {
+      "id": "rt-wyvern",
+      "chefe": "t-wyvern",
+      "titulo": "Wyvern Ancião",
+      "areas": [
+        "Pico dos Arquidragões"
+      ],
+      "ramo": "Opcional · gesto Caminho do Dragão, depois de Oceiros"
+    },
+    {
+      "id": "rt-rei-sem-nome",
+      "chefe": "t-rei-sem-nome",
+      "titulo": "O Rei Sem Nome",
+      "areas": [],
+      "ramo": "Opcional · no Pico dos Arquidragões"
+    },
+    {
+      "id": "rt-final",
+      "chefe": null,
+      "titulo": "Alma das Cinzas e o final",
+      "areas": [
+        "Fornalha da Primeira Chama"
+      ],
+      "prazo": "Faça backup do save antes da luta final se quiser repetir o fim do ciclo."
+    }
   ],
   "apos": {
     "a-pontiffs-left-eye": "rt-sabio",
@@ -35,12 +173,10 @@ export const roteiro = {
     "a-prisoners-chain": "rt-lothric",
     "m-lightning-storm": "rt-final",
     "m-sunlight-spear": "rt-final",
-
     "g-collapse": "rt-vordt",
     "g-hurrah": "rt-vordt",
     "g-call-over": "rt-vordt",
     "a-blue-tearstone-ring": "rt-vordt",
-
     "s-soul-arrow": "rt-madeira",
     "s-heavy-soul-arrow": "rt-madeira",
     "s-soul-greatsword": "rt-madeira",
@@ -58,7 +194,6 @@ export const roteiro = {
     "g-welcome": "rt-madeira",
     "g-beckon": "rt-madeira",
     "g-curl-up": "rt-madeira",
-
     "s-great-soul-arrow": "rt-sabio",
     "s-great-heavy-soul-arrow": "rt-sabio",
     "s-farron-flashsword": "rt-sabio",
@@ -75,7 +210,6 @@ export const roteiro = {
     "m-med-heal": "rt-sabio",
     "m-tears-of-denial": "rt-sabio",
     "m-force": "rt-sabio",
-
     "s-great-farron-dart": "rt-vigilantes",
     "s-farron-hail": "rt-vigilantes",
     "s-cast-light": "rt-vigilantes",
@@ -85,22 +219,18 @@ export const roteiro = {
     "s-twisted-wall-of-light": "rt-vigilantes",
     "a-life-ring": "rt-vigilantes",
     "g-darkmoon-loyalty": "rt-vigilantes",
-
     "m-deep-protection": "rt-diaconos",
     "m-gnaw": "rt-diaconos",
     "a-lloyds-shield-ring": "rt-diaconos",
     "g-patches-squat": "rt-diaconos",
     "g-prostration": "rt-diaconos",
     "a-horsehoof-ring": "rt-diaconos",
-
     "p-acid-surge": "rt-wolnir",
     "p-carthus-beacon": "rt-wolnir",
     "p-carthus-flame-arc": "rt-wolnir",
     "a-farron-ring": "rt-wolnir",
-
     "p-chaos-storm": "rt-rei-demonio",
     "p-great-chaos-fire-orb": "rt-rei-demonio",
-
     "s-soul-spear": "rt-yhorm",
     "s-homing-soulmass": "rt-yhorm",
     "s-affinity": "rt-yhorm",
@@ -110,11 +240,9 @@ export const roteiro = {
     "p-rapport": "rt-yhorm",
     "p-black-flame": "rt-yhorm",
     "p-black-fire-orb": "rt-yhorm",
-
     "m-bountiful-light": "rt-armadura",
     "m-blessed-weapon": "rt-armadura",
     "m-magic-barrier": "rt-armadura",
-
     "a-ring-of-the-suns-first-born": "rt-yhorm",
     "a-ring-of-favor": "rt-yhorm",
     "t-aldrich-devoto": "rt-yhorm",
@@ -126,35 +254,156 @@ export const roteiro = {
     "g-praise-the-sun": "rt-lothric",
     "a-calamity-ring": "rt-rei-sem-nome",
     "a-thunder-stoneplate-ring": "rt-rei-sem-nome",
-
     "s-homing-crystal-soulmass": "rt-lothric",
     "s-crystal-soul-spear": "rt-lothric",
     "s-crystal-magic-weapon": "rt-lothric"
   },
   "passos": [
-    { "id": "q-greirat-1", "node": "rt-vordt", "npc": "Greirat", "texto": "Liberte Greirat da cela abaixo da fogueira Tower on the Wall. A Chave de Cela fica na oficina abaixo do Pus de Homem. Ele dá o Anel da lágrima de pedra azul." },
-    { "id": "q-yoel-1", "node": "rt-madeira", "npc": "Yoel", "texto": "Aceite os serviços de Yoel de Londor perto da fogueira Foot of the High Wall e fale com ele no Santuário (gesto Beckon)." },
-    { "id": "q-yoel-2", "node": "rt-madeira", "npc": "Yoel", "texto": "Para A Usurpação do Fogo: peça a Yoel que desperte sua verdadeira força cinco vezes, morrendo entre uma vez e outra. Depois Yuria de Londor aparece no Santuário.", "perdivel": "Não cure o esvaziamento até o fim da missão." },
-    { "id": "q-cornyx-1", "node": "rt-madeira", "npc": "Cornyx", "texto": "Liberte Cornyx do Grande Pântano da gaiola no Assentamento e fale com ele no Santuário (gesto Welcome)." },
-    { "id": "q-irina-1", "node": "rt-madeira", "npc": "Irina", "texto": "Liberte Irina de Carim da cela no Assentamento e aceite tocá-la (gesto Prayer)." },
-    { "id": "q-greirat-2", "node": "rt-madeira", "npc": "Greirat", "texto": "Entregue a Greirat o Osso de Loretta (no corpo da sacada do prédio escuro da fogueira Undead Settlement). Recarregue a área e fale com ele para o gesto Curl up." },
-    { "id": "q-siegward-1", "node": "rt-madeira", "npc": "Siegward", "texto": "Fale com Siegward de Catarina no elevador do Assentamento e ajude-o contra o Demônio (gestos Toast e Sleep)." },
-    { "id": "q-anri-1", "node": "rt-sabio", "npc": "Anri", "texto": "Fale com Anri de Astora e Horace na fogueira Halfway Fortress." },
-    { "id": "q-sirris-1", "node": "rt-sabio", "npc": "Sirris", "texto": "Depois de falar com Anri e Horace, fale com Sirris no Santuário." },
-    { "id": "q-orbeck-1", "node": "rt-sabio", "npc": "Orbeck", "texto": "Aceite os serviços de Orbeck de Vinheim na Estrada dos Sacrifícios." },
-    { "id": "q-orbeck-2", "node": "rt-vigilantes", "npc": "Orbeck", "texto": "Entregue a Orbeck um pergaminho (Pergaminho de Sábio ou Pergaminho Dourado, ambos no Forte de Farron).", "perdivel": "Se você derrotar seis chefes depois de recrutá-lo sem entregar nenhum pergaminho, ele vai embora de vez." },
-    { "id": "q-sirris-2", "node": "rt-vigilantes", "npc": "Sirris", "texto": "Entregue as Cinzas de caçador de sonhos à Serva (atrás de uma parede ilusória perto do lobo de Farron) e fale com Sirris para o gesto Darkmoon Loyalty.", "perdivel": "Não ofereça Língua Pálida a Rosaria nem mate Yorshka enquanto a missão não acabar." },
-    { "id": "q-siegward-2", "node": "rt-diaconos", "npc": "Siegward", "texto": "Abra as portas azuis em frente à fogueira Rosaria's Bedchamber, recarregue a área e devolva a Siegward, no poço fora da Cleansing Chapel, a armadura comprada de Patches (gesto Rejoice)." },
-    { "id": "q-patches-1", "node": "rt-diaconos", "npc": "Patches", "texto": "Na Catedral, caia na armadilha de Patches e depois converse com ele no Santuário (gestos Patches Squat e Prostration; ele vende o Anel de casco equino)." },
-    { "id": "q-anri-2", "node": "rt-wolnir", "npc": "Anri", "texto": "Depois dos Diáconos, fale com Anri no Santuário e de novo nas Catacumbas de Carthus, na borda junto à ponte de madeira antes de Wolnir.", "perdivel": "Não conte a Anri onde Horace está antes de matá-lo, ou Anri morre." },
-    { "id": "q-sirris-3", "node": "rt-sulyvahn", "npc": "Sirris", "texto": "Na ponte de entrada de Irithyll, use o sinal de Sirris e ajude-a contra Creighton. Volte ao Santuário para receber o Anel do gato prateado. Precisa do Boneco Pequeno (dos Diáconos)." },
-    { "id": "q-anri-3", "node": "rt-sulyvahn", "npc": "Anri", "texto": "Na fogueira Church of Yorshka, esgote o diálogo com Anri (Anel do olho maligno e gesto Quiet Resolve).", "perdivel": "Para A Usurpação do Fogo, não mate a peregrina disfarçada de estátua nessa sala." },
-    { "id": "q-siegward-3", "node": "rt-sulyvahn", "npc": "Siegward", "texto": "Encontre Siegward na cozinha pelo esgoto perto da fogueira Distant Manor, antes de entrar no Calabouço de Irithyll (milagre Emit Force)." },
-    { "id": "q-karla-1", "node": "rt-yhorm", "npc": "Karla", "texto": "Pegue o Chaveiro de Carcereiro no pântano tóxico da Capital Profanada e liberte Karla no Calabouço de Irithyll." },
-    { "id": "q-siegward-4", "node": "rt-yhorm", "npc": "Siegward", "texto": "Liberte Siegward da cela do Calabouço com a Chave de Cela Antiga antes de enfrentar Yhorm. Depois da luta, fale com ele." },
-    { "id": "q-yuria-1", "node": "rt-aldrich", "npc": "Yuria", "texto": "Depois de Pontífice Sulyvahn, esgote o diálogo com Yuria, case-se com Anri no altar abaixo da fogueira de Anor Londo e fale com Yuria mais uma vez.", "perdivel": "Faz parte de A Usurpação do Fogo." },
-    { "id": "q-sirris-4", "node": "rt-dancarino", "npc": "Sirris", "texto": "Depois de Aldrich, use o sinal de Sirris fora da arena da Grande Madeira e ajude-a contra Hodrick. Depois aceite o juramento dela no Santuário." },
-    { "id": "q-irina-2", "node": "rt-armadura", "npc": "Irina", "texto": "Compre todos os milagres de luz da Irina antes de entregar a ela os tomos sombrios (Londor e das Profundezas). Uma alternativa é entregar os tomos sombrios à Karla.", "perdivel": "Se você comprar um milagre sombrio da Irina, Eygon a leva embora." }
+    {
+      "id": "q-greirat-1",
+      "node": "rt-vordt",
+      "npc": "Greirat",
+      "texto": "Liberte Greirat da cela abaixo da fogueira Torreta do Castelo Lothric. A Chave de Cela fica na oficina abaixo do Pus de Homem. Ele dá o Anel da lágrima de pedra azul."
+    },
+    {
+      "id": "q-yoel-1",
+      "node": "rt-madeira",
+      "npc": "Yoel",
+      "texto": "Aceite os serviços de Yoel de Londor perto da fogueira Pé da Grande Muralha e fale com ele no Santuário (gesto Chamar)."
+    },
+    {
+      "id": "q-yoel-2",
+      "node": "rt-madeira",
+      "npc": "Yoel",
+      "texto": "Para A Usurpação do Fogo: peça a Yoel que desperte sua verdadeira força cinco vezes, morrendo entre uma vez e outra. Depois Yuria de Londor aparece no Santuário.",
+      "perdivel": "Não cure o esvaziamento até o fim da missão."
+    },
+    {
+      "id": "q-cornyx-1",
+      "node": "rt-madeira",
+      "npc": "Cornyx",
+      "texto": "Liberte Cornyx do Grande Pântano da gaiola no Assentamento e fale com ele no Santuário (gesto Boas-Vindas)."
+    },
+    {
+      "id": "q-irina-1",
+      "node": "rt-madeira",
+      "npc": "Irina",
+      "texto": "Liberte Irina de Carim da cela no Assentamento e aceite tocá-la (gesto Prece)."
+    },
+    {
+      "id": "q-greirat-2",
+      "node": "rt-madeira",
+      "npc": "Greirat",
+      "texto": "Entregue a Greirat o Osso de Loretta (no corpo da sacada do prédio escuro da fogueira Assentamento de Mortos-vivos). Recarregue a área e fale com ele para o gesto Enroscar-se."
+    },
+    {
+      "id": "q-siegward-1",
+      "node": "rt-madeira",
+      "npc": "Siegward",
+      "texto": "Fale com Siegward de Catarina no elevador do Assentamento e ajude-o contra o Demônio (gestos Brindar e Dormir)."
+    },
+    {
+      "id": "q-anri-1",
+      "node": "rt-sabio",
+      "npc": "Anri",
+      "texto": "Fale com Anri de Astora e Horace na fogueira Acampamento na Floresta."
+    },
+    {
+      "id": "q-sirris-1",
+      "node": "rt-sabio",
+      "npc": "Sirris",
+      "texto": "Depois de falar com Anri e Horace, fale com Sirris no Santuário."
+    },
+    {
+      "id": "q-orbeck-1",
+      "node": "rt-sabio",
+      "npc": "Orbeck",
+      "texto": "Aceite os serviços de Orbeck de Vinheim na Estrada dos Sacrifícios."
+    },
+    {
+      "id": "q-orbeck-2",
+      "node": "rt-vigilantes",
+      "npc": "Orbeck",
+      "texto": "Entregue a Orbeck um pergaminho (Pergaminho de Sábio ou Pergaminho Dourado, ambos no Forte de Farron).",
+      "perdivel": "Se você derrotar seis chefes depois de recrutá-lo sem entregar nenhum pergaminho, ele vai embora de vez."
+    },
+    {
+      "id": "q-sirris-2",
+      "node": "rt-vigilantes",
+      "npc": "Sirris",
+      "texto": "Entregue as Cinzas de caçador de sonhos à Serva (atrás de uma parede ilusória perto do lobo de Farron) e fale com Sirris para o gesto Lealdade da Lua Negra.",
+      "perdivel": "Não ofereça Língua Pálida a Rosaria nem mate Yorshka enquanto a missão não acabar."
+    },
+    {
+      "id": "q-siegward-2",
+      "node": "rt-diaconos",
+      "npc": "Siegward",
+      "texto": "Abra as portas azuis em frente à fogueira Câmara da Rosaria, recarregue a área e devolva a Siegward, no poço fora da Capela Purificadora, a armadura comprada de Patches (gesto Regozijar-se)."
+    },
+    {
+      "id": "q-patches-1",
+      "node": "rt-diaconos",
+      "npc": "Patches",
+      "texto": "Na Catedral, caia na armadilha de Patches e depois converse com ele no Santuário (gestos Agacharmento do Patches e Prostrar-se; ele vende o Anel de casco equino)."
+    },
+    {
+      "id": "q-anri-2",
+      "node": "rt-wolnir",
+      "npc": "Anri",
+      "texto": "Depois dos Diáconos, fale com Anri no Santuário e de novo nas Catacumbas de Carthus, na borda junto à ponte de madeira antes de Wolnir.",
+      "perdivel": "Não conte a Anri onde Horace está antes de matá-lo, ou Anri morre."
+    },
+    {
+      "id": "q-sirris-3",
+      "node": "rt-sulyvahn",
+      "npc": "Sirris",
+      "texto": "Na ponte de entrada de Irithyll, use o sinal de Sirris e ajude-a contra Creighton. Volte ao Santuário para receber o Anel do gato prateado. Precisa do Boneco Pequeno (dos Diáconos)."
+    },
+    {
+      "id": "q-anri-3",
+      "node": "rt-sulyvahn",
+      "npc": "Anri",
+      "texto": "Na fogueira Igreja de Yorshka, esgote o diálogo com Anri (Anel do olho maligno e gesto Quieta determinação).",
+      "perdivel": "Para A Usurpação do Fogo, não mate a peregrina disfarçada de estátua nessa sala."
+    },
+    {
+      "id": "q-siegward-3",
+      "node": "rt-sulyvahn",
+      "npc": "Siegward",
+      "texto": "Encontre Siegward na cozinha pelo esgoto perto da fogueira Castelo Distante, antes de entrar no Calabouço de Irithyll (milagre Emit Force)."
+    },
+    {
+      "id": "q-karla-1",
+      "node": "rt-yhorm",
+      "npc": "Karla",
+      "texto": "Pegue o Chaveiro de Carcereiro no pântano tóxico da Capital Profanada e liberte Karla no Calabouço de Irithyll."
+    },
+    {
+      "id": "q-siegward-4",
+      "node": "rt-yhorm",
+      "npc": "Siegward",
+      "texto": "Liberte Siegward da cela do Calabouço com a Chave de Cela Antiga antes de enfrentar Yhorm. Depois da luta, fale com ele."
+    },
+    {
+      "id": "q-yuria-1",
+      "node": "rt-aldrich",
+      "npc": "Yuria",
+      "texto": "Depois de Pontífice Sulyvahn, esgote o diálogo com Yuria, case-se com Anri no altar abaixo da fogueira de Anor Londo e fale com Yuria mais uma vez.",
+      "perdivel": "Faz parte de A Usurpação do Fogo."
+    },
+    {
+      "id": "q-sirris-4",
+      "node": "rt-dancarino",
+      "npc": "Sirris",
+      "texto": "Depois de Aldrich, use o sinal de Sirris fora da arena da Grande Madeira e ajude-a contra Hodrick. Depois aceite o juramento dela no Santuário."
+    },
+    {
+      "id": "q-irina-2",
+      "node": "rt-armadura",
+      "npc": "Irina",
+      "texto": "Compre todos os milagres de luz da Irina antes de entregar a ela os tomos sombrios (Londor e das Profundezas). Uma alternativa é entregar os tomos sombrios à Karla.",
+      "perdivel": "Se você comprar um milagre sombrio da Irina, Eygon a leva embora."
+    }
   ],
   "semPrazo": "Sem prazo fixo: compras de vendedores iniciais do Santuário, recompensas de pacto, o que vem de Yuria de Londor e o que se recebe no início."
 };

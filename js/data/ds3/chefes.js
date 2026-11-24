@@ -167,7 +167,7 @@ export const chefes = {
       "desc": "Derrote Oceiros, o Rei Decaído.",
       "hint": "Chefe opcional",
       "local": "Jardim do Rei Decaído",
-      "obs": "Depois dele ficam o gesto Path of the Dragon e a passagem para os Túmulos Abandonados.",
+      "obs": "Depois dele ficam o gesto Caminho do Dragão e a passagem para os Túmulos Abandonados.",
       "done": false
     },
     {
@@ -189,7 +189,7 @@ export const chefes = {
       "en": "Ancient Wyvern",
       "desc": "Derrote o Wyvern Ancião.",
       "hint": "Chefe opcional",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Não é para ser vencido no corpo a corpo: suba pelo prédio até a plataforma acima da cabeça e dê um ataque de queda.",
       "done": false
     },
@@ -201,8 +201,8 @@ export const chefes = {
       "en": "The Nameless King",
       "desc": "Derrote o Rei Sem Nome.",
       "hint": "Chefe opcional",
-      "local": "Pico do Arquidragão",
-      "obs": "Toque o grande sino no fim do Pico do Arquidragão para abrir a arena.",
+      "local": "Pico dos Arquidragões",
+      "obs": "Toque o grande sino no fim do Pico dos Arquidragões para abrir a arena.",
       "done": false
     }
   ]

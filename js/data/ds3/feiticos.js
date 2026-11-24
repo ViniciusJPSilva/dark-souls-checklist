@@ -308,7 +308,7 @@ export const feiticos = {
       "en": "Chameleon",
       "img": "6/66/Chameleon-icon.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Na missão de Anri de Astora, o assassino disfarçado de estátua perto da fogueira Church of Yorshka deixa a magia. Se ele não for morto antes, ela fica no corpo dele na Tumba da Lua Negra.",
+      "obs": "Na missão de Anri de Astora, o assassino disfarçado de estátua perto da fogueira Igreja de Yorshka deixa a magia. Se ele não for morto antes, ela fica no corpo dele na Tumba da Lua Negra.",
       "done": false
     },
     {

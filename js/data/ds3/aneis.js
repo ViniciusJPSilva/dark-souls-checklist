@@ -219,7 +219,7 @@ export const aneis = {
       "name": "Anel da proteção de aço",
       "en": "Ring of Steel Protection",
       "img": "a/ad/Ring_of_steel_protection-icon.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Na arena do Wyvern Ancião: suba a escada até o sino, desça à direita e siga pela borda estreita ao lado dos três itens no chão.",
       "done": false
     },
@@ -246,7 +246,7 @@ export const aneis = {
       "name": "Anel de quartzo de trovão",
       "en": "Thunder Stoneplate Ring",
       "img": "c/c7/Thunder_stoneplate_ring.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Da segunda fogueira, siga até sair e suba a escada perto do andaime de madeira.",
       "done": false
     },
@@ -256,7 +256,7 @@ export const aneis = {
       "en": "Dark Stoneplate Ring",
       "img": "f/f1/Dark_stoneplate_ring-icon.png",
       "local": "Anor Londo",
-      "obs": "Depois da fogueira Pontiff Sulyvahn, numa área abaixo dos Diáconos que lançam bolas de fogo, guardada por Escravos de Irithyll.",
+      "obs": "Depois da fogueira Pontífice Sulyvahn, numa área abaixo dos Diáconos que lançam bolas de fogo, guardada por Escravos de Irithyll.",
       "done": false
     },
     {
@@ -274,7 +274,7 @@ export const aneis = {
       "en": "Bloodbite Ring",
       "img": "d/d1/Bloodbite_ring-icon.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Deixado pelo Rato-cão grande nos esgotos abaixo da fogueira Cliff Underside.",
+      "obs": "Deixado pelo Rato-cão grande nos esgotos abaixo da fogueira Parte de Baixo do Penhasco.",
       "done": false
     },
     {
@@ -413,7 +413,7 @@ export const aneis = {
       "en": "Great Swamp Ring",
       "img": "1/14/Great_swamp_ring-icon.png",
       "local": "Estrada dos Sacrifícios",
-      "obs": "Inicial do Piromante. Deixado pelo Caranguejo Gigante no alto da escada perto da fogueira Farron Keep.",
+      "obs": "Inicial do Piromante. Deixado pelo Caranguejo Gigante no alto da escada perto da fogueira Fortaleza de Farron.",
       "done": false
     },
     {
@@ -422,7 +422,7 @@ export const aneis = {
       "en": "Witch's Ring",
       "img": "f/f7/Witch_ring-icon.png",
       "local": "Catacumbas de Carthus",
-      "obs": "Depois do Demônio Errante, a caminho da fogueira Abandoned Tomb, num corpo no fim de um corredor.",
+      "obs": "Depois do Demônio Errante, a caminho da fogueira Túmulo Abandonado, num corpo no fim de um corredor.",
       "done": false
     },
     {
@@ -449,7 +449,7 @@ export const aneis = {
       "en": "Lingering Dragoncrest Ring",
       "img": "f/f2/Lingering_dragon.png",
       "local": "Forte de Farron",
-      "obs": "Deixado pelo Caranguejo Gigante que ronda uma bétula branca perto da fogueira Keep Ruins.",
+      "obs": "Deixado pelo Caranguejo Gigante que ronda uma bétula branca perto da fogueira Ruínas de Fortaleza.",
       "done": false
     },
     {
@@ -512,7 +512,7 @@ export const aneis = {
       "en": "Knight Slayer's Ring",
       "img": "1/1c/Knight_slayers_ring-icon.png",
       "local": "Catacumbas de Carthus",
-      "obs": "Derrote o fantasma do Cavaleiro Matador Tsorig, invocado numa área gradeada ao lado do caminho da Bola de Esqueletos.",
+      "obs": "Derrote o fantasma do Tsorig, o Matador de Cavaleiros, invocado numa área gradeada ao lado do caminho da Bola de Esqueletos.",
       "done": false
     },
     {
@@ -521,7 +521,7 @@ export const aneis = {
       "en": "Ring of the Evil Eye",
       "img": "a/a2/Ring_of_the_evil_eye-icon.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Recompensa da missão de Anri de Astora quando Anri vai para a Church of Yorshka.",
+      "obs": "Recompensa da missão de Anri de Astora quando Anri vai para a Igreja de Yorshka.",
       "perdivel": "Depende da missão de Anri; se falhar, pegue no próximo ciclo.",
       "done": false
     },
@@ -581,7 +581,7 @@ export const aneis = {
       "en": "Magic Clutch Ring",
       "img": "c/c6/Magic_clutch_ring.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Da fogueira Church of Yorshka, volte, desça a escada curva e passe pelo arco à esquerda.",
+      "obs": "Da fogueira Igreja de Yorshka, volte, desça a escada curva e passe pelo arco à esquerda.",
       "done": false
     },
     {
@@ -590,7 +590,7 @@ export const aneis = {
       "en": "Fire Clutch Ring",
       "img": "b/b3/Fire_clutch_ring.png",
       "local": "Assentamento de Mortos-vivos",
-      "obs": "Num corpo atrás da forca, numa ponte de madeira logo acima da fogueira Cliff Underside.",
+      "obs": "Num corpo atrás da forca, numa ponte de madeira logo acima da fogueira Parte de Baixo do Penhasco.",
       "done": false
     },
     {
@@ -598,7 +598,7 @@ export const aneis = {
       "name": "Anel de controle de raio",
       "en": "Lightning Clutch Ring",
       "img": "6/6e/Lightning_clutch_ring.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Num corpo à esquerda do portão que leva ao Wyvern Ancião.",
       "done": false
     },
@@ -782,8 +782,8 @@ export const aneis = {
       "name": "Anel calamitoso",
       "en": "Calamity Ring",
       "img": "9/95/Calamity_ring-icon.png",
-      "local": "Pico do Arquidragão",
-      "obs": "Faça o gesto Path of the Dragon no altar perto da fogueira Dragon-Kin Mausoleum; o Cavaleiro de Sangue de Dragão aparece ao lado e deixa o anel.",
+      "local": "Pico dos Arquidragões",
+      "obs": "Faça o gesto Caminho do Dragão no altar perto da fogueira Mausoléu Dragonoide; o Cavaleiro de Sangue de Dragão aparece ao lado e deixa o anel.",
       "done": false
     },
     {
@@ -820,7 +820,7 @@ export const aneis = {
       "name": "Anel de Havel +1",
       "en": "Havel's Ring +1",
       "img": "7/7b/Havels_ring-icon.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Descendo os degraus do altar da Pedra do Tronco do Dragão Cintilante, à direita da porta.",
       "ciclo": "NG+",
       "done": false
@@ -831,7 +831,7 @@ export const aneis = {
       "en": "Ring of Favor +1",
       "img": "f/f0/Ring_of_favor-icon.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "No andar de cima da sala da fogueira Pontiff Sulyvahn.",
+      "obs": "No andar de cima da sala da fogueira Pontífice Sulyvahn.",
       "ciclo": "NG+",
       "done": false
     },
@@ -921,7 +921,7 @@ export const aneis = {
       "en": "Fleshbite Ring +1",
       "img": "b/bc/Fleshbite_ring-icon.png",
       "local": "Grande Muralha de Lothric",
-      "obs": "Da fogueira Tower on the Wall, no telhado com o morto-vivo que se transforma.",
+      "obs": "Da fogueira Torreta do Castelo Lothric, no telhado com o morto-vivo que se transforma.",
       "ciclo": "NG+",
       "done": false
     },
@@ -931,7 +931,7 @@ export const aneis = {
       "en": "Covetous Gold Serpent Ring +1",
       "img": "8/87/Covetous_gold_serpent_ring-icon.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Da fogueira Church of Yorshka, passe o cemitério até a sala escura com os Escravos de Irithyll.",
+      "obs": "Da fogueira Igreja de Yorshka, passe o cemitério até a sala escura com os Escravos de Irithyll.",
       "ciclo": "NG+",
       "done": false
     },
@@ -951,7 +951,7 @@ export const aneis = {
       "en": "Lingering Dragoncrest Ring +1",
       "img": "f/f2/Lingering_dragon.png",
       "local": "Estrada dos Sacrifícios",
-      "obs": "Ao lado do Caranguejo Gigante logo abaixo da fogueira Crucifixion Woods.",
+      "obs": "Ao lado do Caranguejo Gigante logo abaixo da fogueira Bosque da Crucificação.",
       "ciclo": "NG+",
       "done": false
     },
@@ -971,7 +971,7 @@ export const aneis = {
       "en": "Wolf Ring +1",
       "img": "1/12/Wolf_Ring2.png",
       "local": "Forte de Farron",
-      "obs": "Num corpo logo na saída do prédio da fogueira Keep Ruins.",
+      "obs": "Num corpo logo na saída do prédio da fogueira Ruínas de Fortaleza.",
       "ciclo": "NG+",
       "done": false
     },
@@ -1021,7 +1021,7 @@ export const aneis = {
       "en": "Havel's Ring +2",
       "img": "7/7b/Havels_ring-icon.png",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Numa viga de madeira abaixo da fogueira Prison Tower.",
+      "obs": "Numa viga de madeira abaixo da fogueira Torre da Prisão.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1031,7 +1031,7 @@ export const aneis = {
       "en": "Ring of Favor +2",
       "img": "f/f0/Ring_of_favor-icon.png",
       "local": "Catedral das Profundezas",
-      "obs": "Da fogueira Cleansing Chapel, pegue o atalho da esquerda e suba.",
+      "obs": "Da fogueira Capela Purificadora, pegue o atalho da esquerda e suba.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1041,7 +1041,7 @@ export const aneis = {
       "en": "Ring of Steel Protection +2",
       "img": "a/ad/Ring_of_steel_protection-icon.png",
       "local": "Catacumbas de Carthus",
-      "obs": "Da fogueira Abyss Watchers, desça e siga à esquerda até uma ponte à direita.",
+      "obs": "Da fogueira Vigilantes do Abismo, desça e siga à esquerda até uma ponte à direita.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1051,7 +1051,7 @@ export const aneis = {
       "en": "Magic Stoneplate Ring +2",
       "img": "f/fd/Magic_stoneplate_ring.png",
       "local": "Capital Profanada",
-      "obs": "Da fogueira Profaned Capital, desça a escada da torre e passe pelo buraco na parede.",
+      "obs": "Da fogueira Capital Profanada, desça a escada da torre e passe pelo buraco na parede.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1061,7 +1061,7 @@ export const aneis = {
       "en": "Flame Stoneplate Ring +2",
       "img": "d/d8/Flame_stoneplate_ring.png",
       "local": "Lago Ardente",
-      "obs": "Da fogueira Old King's Antechamber, desça a escada e siga o caminho.",
+      "obs": "Da fogueira Antecâmara do Antigo Rei, desça a escada e siga o caminho.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1081,7 +1081,7 @@ export const aneis = {
       "en": "Dark Stoneplate Ring +2",
       "img": "f/f1/Dark_stoneplate_ring-icon.png",
       "local": "Forte de Farron",
-      "obs": "Da fogueira Keep Ruins, atravesse a ponte dos três Ghrus até uma construção em ruínas.",
+      "obs": "Da fogueira Ruínas de Fortaleza, atravesse a ponte dos três Ghrus até uma construção em ruínas.",
       "ciclo": "NG++",
       "done": false
     },
@@ -1090,7 +1090,7 @@ export const aneis = {
       "name": "Anel da serpente dourada +2",
       "en": "Covetous Gold Serpent Ring +2",
       "img": "8/87/Covetous_gold_serpent_ring-icon.png",
-      "local": "Pico do Arquidragão",
+      "local": "Pico dos Arquidragões",
       "obs": "Na área que aparece depois de derrotar o Rei Sem Nome, à direita da arena.",
       "ciclo": "NG++",
       "done": false

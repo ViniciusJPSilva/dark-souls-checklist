@@ -49,7 +49,7 @@ export const pactos = {
       "desc": "Descubra o pacto dos Sentinelas Azuis.",
       "hint": "Entrar no pacto",
       "local": "Estrada dos Sacrifícios",
-      "obs": "Fale com Horace na fogueira Halfway Fortress (Anri está junto).",
+      "obs": "Fale com Horace na fogueira Acampamento na Floresta (Anri está junto).",
       "done": false
     },
     {
@@ -100,7 +100,7 @@ export const pactos = {
       "hint": "Entrar no pacto",
       "local": "Irithyll do Vale Boreal",
       "req": "Matar Yorshka impede subir de nível no pacto até o NG+ (Anel da Lua Negra e Lâmina da Lua Negra ficam para o próximo ciclo) e pode deixar Sirris hostil.",
-      "obs": "Na torre da Church of Yorshka (da fogueira de Anor Londo, atravesse a ponte invisível). Faça o gesto Darkmoon Loyalty, da missão da Sirris, diante de Yorshka. Sem o gesto, dá para matar Yorshka e pegar o item do pacto, que já conta para o troféu.",
+      "obs": "Na torre da Igreja de Yorshka (da fogueira de Anor Londo, atravesse a ponte invisível). Faça o gesto Lealdade da Lua Negra, da missão da Sirris, diante de Yorshka. Sem o gesto, dá para matar Yorshka e pegar o item do pacto, que já conta para o troféu.",
       "perdivel": "O caminho pelo gesto depende da missão da Sirris. Se ela sair do Santuário, a saída é matar Yorshka ou entrar no NG+.",
       "done": false
     }

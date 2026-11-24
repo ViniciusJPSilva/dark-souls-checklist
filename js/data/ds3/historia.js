@@ -46,10 +46,10 @@ export const historia = {
       "name": "Pico do Arquidragão",
       "en": "Archdragon Peak",
       "desc": "Chegue ao Pico do Arquidragão.",
-      "hint": "Chegar ao Pico do Arquidragão",
+      "hint": "Chegar ao Pico dos Arquidragões",
       "local": "Calabouço de Irithyll",
-      "req": "Gesto Path of the Dragon, num corpo no corredor depois da luta contra Oceiros.",
-      "obs": "No Calabouço de Irithyll, fique no tapete ao lado da estátua do dragão sentado e faça o gesto Path of the Dragon.",
+      "req": "Gesto Caminho do Dragão, num corpo no corredor depois da luta contra Oceiros.",
+      "obs": "No Calabouço de Irithyll, fique no tapete ao lado da estátua do dragão sentado e faça o gesto Caminho do Dragão.",
       "done": false
     },
     {
@@ -73,7 +73,7 @@ export const historia = {
       "desc": "Chegue ao final de \"O Fim do Fogo\".",
       "hint": "Final O Fim do Fogo",
       "local": "Fornalha da Primeira Chama",
-      "req": "Entregue os Eyes of a Fire Keeper à Guardiã do Fogo do Santuário.",
+      "req": "Entregue os Olhos de Guardiã do Fogo à Guardiã do Fogo do Santuário.",
       "obs": "Os olhos ficam atrás de uma parede ilusória no Santuário escuro dos Túmulos Abandonados. Depois de derrotar a Alma das Cinzas, invoque a Guardiã do Fogo em vez de tocar na fogueira.",
       "perdivel": "Só no ciclo em que os olhos foram entregues; se perder, refaça no NG+.",
       "done": false
@@ -88,7 +88,7 @@ export const historia = {
       "hint": "Final A Usurpação do Fogo",
       "local": "Fornalha da Primeira Chama",
       "req": "Missão de Yoel de Londor, Yuria e Anri: recrute Yoel na Grande Muralha de Lothric, receba dele 5 níveis gratuitos (Yoel morre e Yuria assume), siga Anri pelas Catacumbas de Carthus e Irithyll, mate Horace no Lago Ardente e se case com Anri na capela abaixo da fogueira de Anor Londo.",
-      "obs": "Não cure o esvaziamento durante a missão: não remova o Dark Sigil, não entregue a Fire Keeper Soul e não use Purging Stone. Depois da Alma das Cinzas, interaja com a fogueira.",
+      "obs": "Não cure o esvaziamento durante a missão: não remova o Símbolo das Trevas, não entregue a Alma de Guardiã do Fogo e não use Pedra da purificação. Depois da Alma das Cinzas, interaja com a fogueira.",
       "perdivel": "A missão é longa e pode falhar no meio; se falhar, refaça no NG+.",
       "done": false
     }
