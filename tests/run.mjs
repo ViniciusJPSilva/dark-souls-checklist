@@ -6,8 +6,8 @@ import { spawn } from "node:child_process";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const PORT = 8765;
-const SUITES = ["reforco", "plataformas", "jogos", "ds3", "ciclos", "roteiro"];
-const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".mjs": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".json": "application/json", ".webmanifest": "application/manifest+json" };
+const SUITES = ["reforco", "plataformas", "jogos", "ds3", "ciclos", "roteiro", "offline"];
+const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".mjs": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png", ".json": "application/json", ".webmanifest": "application/manifest+json" };
 
 const server = createServer(async (req, res) => {
   const path = decodeURIComponent(new URL(req.url, "http://x").pathname);

@@ -89,3 +89,9 @@ A ordem dos finais no plano (Usurpação no primeiro ciclo, se a missão der cer
 - A missão da Usurpação (Yoel, Yuria e Anri) também foi conferida na PowerPyx: https://www.powerpyx.com/dark-souls-3-trophy-guide/
 - Itens que ficam depois do chefe da própria área (por exemplo o Anel da Princesa do Sol depois de Aldrich, ou o Fragmento de Estus 9 pela fogueira do Dançarino) foram passados para a etapa seguinte, com base no texto de local de cada um.
 - Os nomes de itens-chave em PT (Chaveiro de Carcereiro, Chave de Cela Antiga, Boneco Pequeno, Governante da tempestade) vêm do catálogo da Estus.
+
+## Pendências conferidas em 23/11/2026
+
+- **Pacto Lâmina da Lua Negra sem o gesto:** confirmado. Matar Yorshka dá o item do pacto, mas impede subir de nível nele até o NG+ e pode deixar Sirris hostil. Fontes: https://darksouls3.wiki.fextralife.com/Blades_of_the_Darkmoon e https://darksouls3.wiki.fextralife.com/Company_Captain_Yorshka
+- **Gestos e fogueiras:** sem fonte com os nomes oficiais em PT-BR. A Estus, a Fandom PT e os guias brasileiros encontrados usam os nomes em inglês ou traduções informais. Continuam em inglês até uma checagem dentro do jogo.
+- **"Ajuda curtativa" (Heal Aid):** é o nome no catálogo da Estus, inclusive na URL da página. Nenhuma outra fonte em PT foi encontrada para confirmar se o erro vem da tradução do jogo ou da Estus. Mantido como está até uma checagem dentro do jogo.

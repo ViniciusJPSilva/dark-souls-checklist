@@ -1,10 +1,19 @@
 {
-  "name": "Dark Souls Remastered — Checklist de Troféus",
-  "short_name": "DSR Checklist",
+  "name": "Dark Souls — Checklist de Conquistas",
+  "short_name": "Souls Checklist",
+  "description": "Checklist de troféus e conquistas da série Dark Souls em português, com roteiro e progresso salvo no aparelho.",
   "lang": "pt-BR",
+  "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0d0c0b",
   "theme_color": "#0d0c0b",
-  "icons": [{ "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
 }

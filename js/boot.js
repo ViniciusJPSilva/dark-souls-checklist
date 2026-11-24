@@ -1,6 +1,7 @@
 import { JOGO, JOGOS } from "./jogo.js";
 import { prefs } from "./prefs.js";
 import { esc } from "./ui/dom.js";
+import "./pwa.js";
 
 const $ = s => document.querySelector(s);
 

@@ -99,8 +99,9 @@ export const pactos = {
       "desc": "Descubra o pacto da Lâmina da Lua Negra.",
       "hint": "Entrar no pacto",
       "local": "Irithyll do Vale Boreal",
-      "obs": "Na torre da Church of Yorshka (da fogueira de Anor Londo, atravesse a ponte invisível). Fale com Yorshka tendo o gesto Darkmoon Loyalty, da missão da Sirris.",
-      "perdivel": "Depende da missão da Sirris; se ela sair do Santuário, refaça no NG+.",
+      "req": "Matar Yorshka impede subir de nível no pacto até o NG+ (Anel da Lua Negra e Lâmina da Lua Negra ficam para o próximo ciclo) e pode deixar Sirris hostil.",
+      "obs": "Na torre da Church of Yorshka (da fogueira de Anor Londo, atravesse a ponte invisível). Faça o gesto Darkmoon Loyalty, da missão da Sirris, diante de Yorshka. Sem o gesto, dá para matar Yorshka e pegar o item do pacto, que já conta para o troféu.",
+      "perdivel": "O caminho pelo gesto depende da missão da Sirris. Se ela sair do Santuário, a saída é matar Yorshka ou entrar no NG+.",
       "done": false
     }
   ]
