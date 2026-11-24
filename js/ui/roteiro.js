@@ -1,6 +1,6 @@
 import { $, esc, initials } from "./dom.js";
 import { itemImg, trophyImg } from "../data/images.js";
-import { checkIcon, perdivelBadge } from "./templates.js";
+import { checkIcon, infoIcon, perdivelBadge } from "./templates.js";
 import { ROTA, estado } from "../rota.js";
 
 const closeIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>`;
@@ -30,11 +30,11 @@ function passoBtn(i) {
 function itemBtn(i) {
   if (i.passo) return passoBtn(i);
   const on = isDoneFn(i.id);
-  return `<li><button class="rt-item${on ? " is-done" : ""}" data-rt-toggle="${i.id}" aria-pressed="${on}">
+  return `<li class="rt-row"><button class="rt-item${on ? " is-done" : ""}" data-rt-toggle="${i.id}" aria-pressed="${on}">
     ${thumb(i)}
     <span class="rt-item-text"><span class="rt-item-name">${esc(i.name)}<span class="en">${esc(i.en)}</span></span>${i.perdivel ? perdivelBadge(true) : ""}</span>
     <span class="check" aria-hidden="true">${checkIcon}</span>
-  </button></li>`;
+  </button><button class="rt-info" data-rt-info="${i.id}" aria-label="Detalhes de ${esc(i.name)}">${infoIcon}</button></li>`;
 }
 
 function grupos(itens) {
@@ -110,7 +110,7 @@ function setOpen(open) {
   else if (!matchMedia(DESKTOP).matches) fab.focus({ preventScroll: true });
 }
 
-export function mountRoteiro({ isDone, toggle }) {
+export function mountRoteiro({ isDone, toggle, showDetail }) {
   if (!ROTA) return;
   isDoneFn = isDone;
   document.body.classList.add("has-roteiro");
@@ -120,11 +120,15 @@ export function mountRoteiro({ isDone, toggle }) {
 
   fab.addEventListener("click", () => setOpen(true));
   overlay.addEventListener("click", () => setOpen(false));
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && isOpen()) setOpen(false); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && isOpen() && !document.querySelector("dialog[open]")) setOpen(false);
+  });
   matchMedia(DESKTOP).addEventListener("change", () => setOpen(false));
 
   aside.addEventListener("click", e => {
     if (e.target.closest("[data-rt-close]")) return setOpen(false);
+    const info = e.target.closest("[data-rt-info]");
+    if (info) return showDetail(info.dataset.rtInfo);
     const b = e.target.closest("[data-rt-toggle]");
     if (b) toggle(b.dataset.rtToggle);
   });

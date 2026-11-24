@@ -658,3 +658,12 @@ html:has(#barExtra:not([hidden])) { scroll-padding-top: 220px; }
 .rt-passo-prazo { font-size: 13px; line-height: 1.3; color: var(--danger); }
 .rt-passo .check { margin-top: 2px; }
 .rt-passo.is-done .rt-passo-text { color: var(--muted); text-decoration: line-through; text-decoration-color: rgb(255 255 255 / .25); }
+
+.rt-row { display: flex; align-items: stretch; gap: 4px; }
+.rt-row .rt-item { flex: 1; min-width: 0; }
+.rt-info {
+  flex: none; width: 44px; display: grid; place-items: center; color: var(--faint);
+  border-radius: var(--r-sm); background: var(--bg-2); border: 1px solid transparent;
+}
+.rt-info:hover { color: var(--ember-2); border-color: var(--line-2); }
+.rt-info svg { width: 19px; height: 19px; }

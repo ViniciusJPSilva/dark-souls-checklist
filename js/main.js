@@ -322,7 +322,7 @@ menu.addEventListener("click", async e => {
 
 installImageFallback(document);
 mount();
-mountRoteiro({ isDone, toggle });
+mountRoteiro({ isDone, toggle, showDetail });
 
 const bar = $("#bar");
 new ResizeObserver(() => document.documentElement.style.setProperty("--bar-h", `${bar.offsetHeight}px`)).observe(bar);
